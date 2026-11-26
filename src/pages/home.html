@@ -65,7 +65,18 @@
           <li>{{ t('Đội ngũ năng động, nhiều năm kinh nghiệm trong ngành thực phẩm', 'A dynamic team with years of food-industry experience') }}</li>
           <li>{{ t('Kết nối nguồn cung - cầu giữa Việt Nam với thế giới', 'Connecting supply and demand between Vietnam and the world') }}</li>
         </ul>
-        {{ m.more_link('about', 'Về TTP Foods', 'About TTP Foods') }}
+        <div class="who-partners">
+          <span class="who-partners-label">{{ t('Đối tác nguồn cung', 'Supply partners') }}</span>
+          <ul>
+            <li><strong>Farina</strong><span>{{ t('Việt Nam', 'Vietnam') }}</span></li>
+            <li><strong>E-King Gelatin</strong><span>{{ t('Trung Quốc', 'China') }}</span></li>
+            <li><strong>Mewah Dairies</strong><span>Malaysia</span></li>
+          </ul>
+        </div>
+        <div class="who-actions">
+          <a class="btn btn-primary" href="{{ url('contact') }}#form">{{ t('Liên hệ tư vấn', 'Talk to us') }} <span class="arrow" aria-hidden="true">→</span></a>
+          {{ m.more_link('about', 'Về TTP Foods', 'About TTP Foods') }}
+        </div>
       </div>
       {% set w1 = product_image('topping', '_intro') or product_image('topping', '_cover') %}
       {% set w2 = product_image('milka', '_cover') %}
