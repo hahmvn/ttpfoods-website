@@ -23,8 +23,9 @@
     "version": "1.0",
     "updated": "26/11/2026",
     "effective_date": "",
-    "contact_unit_vi": "",
-    "contact_unit_en": "",
-    "contact_email": ""
+    "contact_unit_vi": "Phòng Hành chính Nhân sự",
+    "contact_unit_en": "HR & Administration Department",
+    "contact_email": "",
+    "response_working_days": 3
   }
 }
