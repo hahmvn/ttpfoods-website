@@ -53,20 +53,35 @@
 </section>
 
 <!-- Who we are -->
-<section>
+<section class="who">
   <div class="container">
-    <span class="eyebrow">{{ t('Chúng tôi là ai?', 'Who we are') }}</span>
-    <h2 class="statement reveal">{{ t('Chúng tôi là nhà cung cấp nguyên liệu, phụ gia, sản phẩm và dịch vụ cho ngành Công nghiệp Thực phẩm.', 'We supply food ingredients, food additives, foods and food technology.') }}</h2>
-    <div class="about-grid">
-      <div class="reveal">
+    <div class="who-grid">
+      <div class="who-text reveal">
+        <span class="eyebrow">{{ t('Chúng tôi là ai?', 'Who we are') }}</span>
+        <h2 class="who-title">{{ t('Nhà cung cấp nguyên liệu, phụ gia, sản phẩm và dịch vụ cho ngành Công nghiệp Thực phẩm.', 'We supply food ingredients, food additives, foods and food technology.') }}</h2>
         <p class="lead">{{ t('TTP là nhà cung cấp nguyên liệu, phụ gia, sản phẩm, dịch vụ trong ngành Công nghiệp Thực phẩm. Với đội ngũ nhân sự năng động, có kinh nghiệm lâu năm trong ngành, chúng tôi mang đến những giải pháp tối ưu cho khách hàng – kết nối các nguồn cung - cầu giữa Việt Nam với thế giới.', 'We supply food ingredients, food additives, foods and food technology. Through effective research by experienced experts, we always find the most effective solution for our customers, and we create the connection between Vietnam and international resources.') }}</p>
+        <ul class="who-points">
+          <li>{{ t('Nguyên liệu, phụ gia từ các nhà sản xuất uy tín trong nước và quốc tế', 'Ingredients and additives from reputable domestic and international manufacturers') }}</li>
+          <li>{{ t('Đội ngũ năng động, nhiều năm kinh nghiệm trong ngành thực phẩm', 'A dynamic team with years of food-industry experience') }}</li>
+          <li>{{ t('Kết nối nguồn cung - cầu giữa Việt Nam với thế giới', 'Connecting supply and demand between Vietnam and the world') }}</li>
+        </ul>
         {{ m.more_link('about', 'Về TTP Foods', 'About TTP Foods') }}
       </div>
-      <div class="split-stats split-stats--card reveal">
-        <div class="stat"><div class="num">8</div><div class="label">{{ t('nhóm sản phẩm nguyên liệu thực phẩm', 'food ingredient product groups') }}</div></div>
-        <div class="stat"><div class="num">4</div><div class="label">{{ t('lĩnh vực dịch vụ tư vấn', 'consulting service areas') }}</div></div>
-        <div class="stat"><div class="num">5</div><div class="label">{{ t('quốc gia & vùng lãnh thổ nguồn cung, công nghệ', 'source & technology countries/regions') }}</div></div>
+      {% set w1 = product_image('topping', '_intro') or product_image('topping', '_cover') %}
+      {% set w2 = product_image('milka', '_cover') %}
+      {% set w3 = product_image('jam', '_cover') %}
+      {% if w1 and w2 and w3 %}
+      <div class="who-mosaic reveal" aria-hidden="true">
+        <span class="wm wm-1">{{ picture(w1, '') }}</span>
+        <span class="wm wm-2">{{ picture(w2, '') }}</span>
+        <span class="wm wm-3">{{ picture(w3, '') }}</span>
       </div>
+      {% endif %}
+    </div>
+    <div class="who-stats reveal">
+      <div class="stat"><div class="num">8</div><div class="label">{{ t('nhóm sản phẩm nguyên liệu thực phẩm', 'food ingredient product groups') }}</div></div>
+      <div class="stat"><div class="num">4</div><div class="label">{{ t('lĩnh vực dịch vụ tư vấn', 'consulting service areas') }}</div></div>
+      <div class="stat"><div class="num">5</div><div class="label">{{ t('quốc gia & vùng lãnh thổ nguồn cung, công nghệ', 'source & technology countries/regions') }}</div></div>
     </div>
   </div>
 </section>

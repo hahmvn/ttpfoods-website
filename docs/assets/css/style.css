@@ -882,3 +882,30 @@ ul.certs { list-style: none; margin: 16px 0 0; padding: 0; display: flex; flex-w
 .group-intro > .media--cover { border-right: 0; }
 .media-badge { position: absolute; left: 16px; bottom: 16px; z-index: 1; background: var(--accent); color: #fff; font-weight: 700; font-size: 12px; letter-spacing: 1.5px; padding: 5px 12px; border-radius: 3px; }
 .media--cover img { position: absolute; inset: 0; width: 100%; height: 100%; }
+
+/* ---- Home: who we are (compact 2-col + mosaic + stat band) ---- */
+.who-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 56px; align-items: center; }
+.who-title { font-size: clamp(24px, 2.4vw, 31px); line-height: 1.25; font-weight: 700; letter-spacing: -0.01em; margin: 8px 0 18px; }
+.who-text .lead { font-size: 17px; margin-bottom: 20px; }
+.who-points { list-style: none; padding: 0; margin: 0 0 26px; display: grid; gap: 12px; }
+.who-points li { position: relative; padding-left: 34px; color: var(--ink-2); font-size: 16px; line-height: 1.5; }
+.who-points li::before { content: ""; position: absolute; left: 0; top: 1px; width: 22px; height: 22px; border-radius: 50%;
+  background: var(--accent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center / 14px no-repeat; }
+.who-mosaic { display: grid; grid-template-columns: 1.1fr 1fr; grid-template-rows: 1fr 1fr; gap: 14px; aspect-ratio: 6 / 5; }
+.who-mosaic .wm { position: relative; overflow: hidden; border-radius: var(--radius); background: #eee; }
+.who-mosaic .wm-1 { grid-row: 1 / span 2; }
+.who-mosaic .wm picture, .who-mosaic .wm img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.who-stats { margin-top: 56px; display: grid; grid-template-columns: repeat(3, 1fr); background: var(--slate); color: #fff; border-radius: var(--radius); padding: 30px 8px; }
+.who-stats .stat { display: flex; align-items: center; gap: 18px; padding: 4px 32px; }
+.who-stats .stat + .stat { border-left: 1px solid rgba(255,255,255,.16); }
+.who-stats .stat .num { font-size: clamp(36px, 3.6vw, 48px); line-height: 1; flex: none; }
+.who-stats .stat .label { font-size: 15px; line-height: 1.4; opacity: .88; }
+@media (max-width: 960px) {
+  .who-grid { grid-template-columns: 1fr; gap: 36px; }
+  .who-mosaic { aspect-ratio: 16 / 11; }
+}
+@media (max-width: 720px) {
+  .who-stats { grid-template-columns: 1fr; padding: 8px 24px; margin-top: 40px; }
+  .who-stats .stat { padding: 18px 0; }
+  .who-stats .stat + .stat { border-left: 0; border-top: 1px solid rgba(255,255,255,.16); }
+}
