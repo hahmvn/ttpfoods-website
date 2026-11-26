@@ -123,6 +123,10 @@
       e.preventDefault();
       if (form.botcheck && form.botcheck.checked) return;
       if (!validate()) return;
+      var now = new Date(), pad = function (n) { return (n < 10 ? "0" : "") + n; };
+      form.submitted_at.value = now.getFullYear() + "-" + pad(now.getMonth() + 1) + "-" + pad(now.getDate()) + " " +
+        pad(now.getHours()) + ":" + pad(now.getMinutes()) + " (UTC" + (now.getTimezoneOffset() > 0 ? "-" : "+") +
+        pad(Math.floor(Math.abs(now.getTimezoneOffset()) / 60)) + ")";
       var data = new FormData(form);
       var key = form.getAttribute("data-key");
       if (!key) {
