@@ -857,3 +857,5 @@ body.nav-open .quick-contact { display: none; }
 .contact-aside a:hover { text-decoration: underline; }
 @media (max-width: 960px) { .form-layout { grid-template-columns: 1fr; gap: 32px; } .contact-aside { position: static; } }
 @media (max-width: 600px) { .cform-grid { grid-template-columns: 1fr; } }
+/* Contact page on phones: contact details sit next to the form, floating buttons would cover the inputs */
+@media (max-width: 960px) { .page-contact .quick-contact { display: none; } }
