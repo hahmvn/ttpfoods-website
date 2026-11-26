@@ -38,17 +38,20 @@
 {% block content %}
 
 
-<section class="hero">
+<section class="hero hero--split">
   <img class="hero-mark" src="/assets/img/brand/ttp-mark-white.png" alt="" aria-hidden="true" width="300" height="300">
-  <span class="brand-stripes" aria-hidden="true"></span>
-  <div class="container">
-    <span class="hero-eyebrow">{{ t('Giải pháp tối ưu – Thành công bền vững', 'Optimum solution – Lasting success') }}</span>
-    <h1>{{ t('Nguyên liệu, phụ gia thực phẩm và tư vấn cho nhà sản xuất', 'Food ingredients, additives and consulting for manufacturers') }}</h1>
-    <p class="slogan">{{ t('Đối tác tin cậy của các nhà sản xuất thực phẩm – dược phẩm, kết nối nguồn cung - cầu giữa Việt Nam và thế giới.', 'A trusted partner for food and pharmaceutical manufacturers, connecting Vietnam with global supply and demand.') }}</p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="{{ url('products') }}">{{ t('Xem sản phẩm', 'View products') }} <span class="arrow" aria-hidden="true">→</span></a>
-      <a class="btn btn-light" href="{{ url('contact') }}#form">{{ t('Yêu cầu tư vấn', 'Request advice') }}</a>
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <span class="hero-eyebrow">{{ t('Giải pháp tối ưu – Thành công bền vững', 'Optimum solution – Lasting success') }}</span>
+      <h1>{{ t('Nguyên liệu, phụ gia thực phẩm và tư vấn cho nhà sản xuất', 'Food ingredients, additives and consulting for manufacturers') }}</h1>
+      <p class="slogan">{{ t('Đối tác tin cậy của các nhà sản xuất thực phẩm – dược phẩm, kết nối nguồn cung - cầu giữa Việt Nam và thế giới.', 'A trusted partner for food and pharmaceutical manufacturers, connecting Vietnam with global supply and demand.') }}</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="{{ url('products') }}">{{ t('Xem sản phẩm', 'View products') }} <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="btn btn-light" href="{{ url('contact') }}#form">{{ t('Yêu cầu tư vấn', 'Request advice') }}</a>
+      </div>
     </div>
+    {% set hv = product_image('gelatin', '_intro') or product_image('gelatin', '_cover') %}
+    {% if hv %}<div class="hero-visual" aria-hidden="true">{{ picture(hv, '', lazy=False, sizes='(max-width: 900px) 0px, 480px') }}</div>{% endif %}
   </div>
 </section>
 
@@ -140,7 +143,6 @@
           <span class="leader-name">Nguyễn Hoàng Dương</span>
           <span class="leader-role">{{ t('Chủ tịch HĐQT - Giám đốc', 'Chairman of the Group') }}</span>
           <span class="leader-line">{{ t('Nguyên Phó Tổng giám đốc Công ty CP Sữa Hà Nội', 'Former Deputy General Director, Hanoi Milk JSC') }}</span>
-          <span class="leader-edu">{{ t('Kỹ sư Công nghệ Thực phẩm, ĐH Bách khoa Hà Nội', 'Food Technology Engineer, Hanoi University of Science and Technology') }}</span>
         </span>
       </a></li>
       <li class="reveal"><a class="leader-card" href="{{ url('leadership') }}#mai-khac-tung">
@@ -149,7 +151,6 @@
           <span class="leader-name">Mai Khắc Tùng</span>
           <span class="leader-role">{{ t('Phó Chủ tịch kiêm Phó Giám đốc điều hành', 'Vice Chairman and Deputy CEO') }}</span>
           <span class="leader-line">{{ t('Nguyên Giám đốc Sản xuất Mondelez', 'Former Production Director, Mondelez') }}</span>
-          <span class="leader-edu">{{ t('Kỹ sư Công nghệ Thực phẩm · MBA, ĐH Benedictine (Hoa Kỳ)', 'Food Technology Engineer · MBA, Benedictine University (USA)') }}</span>
         </span>
       </a></li>
       <li class="reveal"><a class="leader-card" href="{{ url('leadership') }}#bui-hoang-anh">
@@ -158,7 +159,6 @@
           <span class="leader-name">Bùi Hoàng Anh</span>
           <span class="leader-role">{{ t('Phó Giám đốc', 'Deputy Director') }}</span>
           <span class="leader-line">{{ t('Nguyên Quản lý pháp lý & khoa học, Nestlé Việt Nam', 'Former Regulatory & Scientific Affairs Manager, Nestlé Vietnam') }}</span>
-          <span class="leader-edu">{{ t('Thạc sỹ Công nghệ Sinh học, ĐH Bách khoa Hà Nội', 'Master of Biotechnology, Hanoi University of Technology') }}</span>
         </span>
       </a></li>
       <li class="reveal"><a class="leader-card" href="{{ url('leadership') }}#vu-thuy-linh">
@@ -167,7 +167,6 @@
           <span class="leader-name">Vũ Thùy Linh</span>
           <span class="leader-role">{{ t('Giám đốc Hành chính Nhân sự', 'HR & Administration Director') }}</span>
           <span class="leader-line">{{ t('Nguyên Trưởng phòng Nhân sự Yamaha Việt Nam', 'Former Human Resources Manager, Yamaha Vietnam') }}</span>
-          <span class="leader-edu">{{ t('Đại học Ngoại ngữ Hà Nội', 'Hanoi University of Foreign Languages') }}</span>
         </span>
       </a></li>
     </ul>

@@ -996,3 +996,43 @@ ul.certs { list-style: none; margin: 16px 0 0; padding: 0; display: flex; flex-w
   opacity: .06;
 }
 @media (max-width: 600px) { .brand-pattern::before { background-size: 240px auto; background-position: right -50px bottom -50px; } }
+
+/* ===== v3.1 – package 1: layout only ===== */
+/* Home hero: text left, ingredient photo right; smaller decorative mark */
+.hero--split { min-height: 0; padding: 0; }
+.hero--split .brand-stripes { display: none; }
+.hero--split .hero-mark { height: 70%; right: auto; left: -60px; opacity: .05; }
+.hero-grid { display: grid; grid-template-columns: 1.25fr 1fr; gap: 56px; align-items: center; padding-top: 64px; padding-bottom: 64px; }
+.hero--split .container.hero-grid { padding-left: 24px; }
+.hero-visual { position: relative; aspect-ratio: 4 / 5; max-height: 520px; justify-self: end; width: 100%; max-width: 440px; border-radius: var(--radius); overflow: hidden; box-shadow: 0 24px 60px rgba(0,0,0,.28); }
+.hero-visual picture, .hero-visual img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero--split h1 { font-size: clamp(30px, 3.6vw, 48px); }
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; padding-top: 48px; padding-bottom: 48px; }
+  .hero-visual { display: none; }
+}
+/* Sub-page banners: light background, red only as accent (404 keeps the red brand banner) */
+.hero--page:not(.hero--404) {
+  background: #fff; color: var(--ink);
+  border-bottom: 1px solid var(--line);
+  position: relative;
+}
+.hero--page:not(.hero--404)::before {
+  content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px; background: var(--accent);
+}
+.hero--page:not(.hero--404) .hero-mark,
+.hero--page:not(.hero--404) .brand-stripes { display: none; }
+.hero--page:not(.hero--404) .breadcrumb { color: var(--ink-2); opacity: 1; }
+.hero--page:not(.hero--404) .breadcrumb a:hover { color: var(--accent); }
+.hero--page:not(.hero--404) .breadcrumb [aria-current] { color: var(--ink); }
+.hero--page:not(.hero--404) .hero-eyebrow {
+  border: 0; padding: 0; background: none; color: var(--accent);
+  font-weight: 700; letter-spacing: .12em;
+}
+.hero--page:not(.hero--404) h1 { color: var(--ink); }
+.hero--page:not(.hero--404) .slogan { color: var(--ink-2); opacity: 1; }
+.hero--page:not(.hero--404) :focus-visible { outline-color: var(--accent); }
+.hero--page:not(.hero--404) .container { padding-left: 24px; }
+.hero--page:not(.hero--404) .breadcrumb a { color: var(--ink-2); opacity: 1; }
+.hero--page:not(.hero--404) .breadcrumb a:hover { color: var(--accent); }
+.svc h2.svc-title { font-size: 22px; margin: 6px 0 14px; letter-spacing: 0; }
