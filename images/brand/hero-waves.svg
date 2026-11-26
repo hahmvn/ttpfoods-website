@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 600" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0.4">
+      <stop offset="0" stop-color="#8f1a10"/>
+      <stop offset="0.55" stop-color="#b3241a"/>
+      <stop offset="1" stop-color="#6e1209"/>
+    </linearGradient>
+    <linearGradient id="w1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d93a2b"/>
+      <stop offset="1" stop-color="#9e1e14"/>
+    </linearGradient>
+    <linearGradient id="w2" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e2453a" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#a32015" stop-opacity=".2"/>
+    </linearGradient>
+    <linearGradient id="shade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".35"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="600" fill="url(#bg)"/>
+  <ellipse cx="700" cy="760" rx="980" ry="700" fill="url(#w1)" opacity=".55"/>
+  <ellipse cx="1180" cy="820" rx="720" ry="760" fill="url(#w2)" opacity=".7"/>
+  <ellipse cx="1420" cy="900" rx="520" ry="760" fill="#7a150c" opacity=".55"/>
+  <path d="M520 -40 C 760 180, 860 420, 820 640" stroke="#ff8a7a" stroke-opacity=".35" stroke-width="3" fill="none"/>
+  <path d="M980 -40 C 1160 160, 1250 380, 1230 640" stroke="#ff8a7a" stroke-opacity=".3" stroke-width="2" fill="none"/>
+  <path d="M1260 -40 C 1400 140, 1470 360, 1460 640" stroke="#ff9d90" stroke-opacity=".25" stroke-width="2" fill="none"/>
+  <rect width="1600" height="600" fill="url(#shade)"/>
+</svg>
