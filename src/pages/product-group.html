@@ -19,7 +19,7 @@
         </dl>
         {% endif %}
         {% if g.tags %}<ul class="tags">{% for tg in g.tags %}<li class="tag">{{ tg[lang] }}</li>{% endfor %}</ul>{% endif %}
-        <a class="btn btn-primary" href="{{ url('contact') }}">{{ t('Yêu cầu báo giá / tư vấn', 'Request a quote / advice') }} <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="btn btn-primary" href="{{ url('contact') }}?sp={{ g.key }}#form">{{ t('Yêu cầu báo giá / tư vấn', 'Request a quote / advice') }} <span class="arrow" aria-hidden="true">→</span></a>
       </div>
     </div>
 

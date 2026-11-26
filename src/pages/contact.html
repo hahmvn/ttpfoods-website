@@ -5,7 +5,27 @@
    t('Liên hệ với TTP Foods để được tư vấn về nguyên liệu, phụ gia và dịch vụ phù hợp.',
      'Contact TTP Foods for advice on the right ingredients, additives and services.'),
    t('Chúng tôi luôn sẵn sàng hỗ trợ', 'We are here to help')) }}
-{% include "partials/contact-band.html" %}
+<section class="form-section">
+  <div class="container">
+    <div class="form-layout">
+      <div>
+        <span class="eyebrow">{{ t('Gửi yêu cầu', 'Send a request') }}</span>
+        <h2 class="section-title">{{ t('Yêu cầu báo giá & tư vấn', 'Request a quote or advice') }}</h2>
+        <p class="lead">{{ t('Để lại thông tin, đội ngũ TTP Foods sẽ liên hệ lại với bạn sớm nhất.', 'Leave your details and the TTP Foods team will get back to you shortly.') }}</p>
+        {% include "partials/contact-form.html" %}
+      </div>
+      <aside class="contact-aside" aria-label="{{ t('Thông tin liên hệ', 'Contact details') }}">
+        <h3>{{ t('Liên hệ trực tiếp', 'Contact us directly') }}</h3>
+        <ul>
+          <li><span>{{ t('Điện thoại', 'Phone') }}</span><a href="tel:+84904004199">0904 004 199</a><a href="tel:+84968383499">0968 383 499</a></li>
+          <li><span>Zalo</span><a href="https://zalo.me/0904004199" target="_blank" rel="noopener">0904 004 199</a></li>
+          <li><span>Email</span><a href="mailto:info@ttpfoods.vn">info@ttpfoods.vn</a></li>
+          <li><span>{{ t('Địa chỉ', 'Address') }}</span>{{ t('14B Hàn Thuyên, Phường Hai Bà Trưng, Hà Nội', '14B Han Thuyen St., Hai Ba Trung Ward, Hanoi, Vietnam') }}</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
 
 {% set maps_q = "14B+H%C3%A0n+Thuy%C3%AAn%2C+Hai+B%C3%A0+Tr%C6%B0ng%2C+H%C3%A0+N%E1%BB%99i" %}
 <section class="section-tight section-alt">

@@ -1,0 +1,8 @@
+{
+  "contact_email": "info@ttpfoods.vn",
+  "form": {
+    "provider": "web3forms",
+    "endpoint": "https://api.web3forms.com/submit",
+    "access_key": ""
+  }
+}

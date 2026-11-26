@@ -85,6 +85,74 @@
     });
   });
 
+  /* ---------- Contact form ---------- */
+  var form = document.querySelector("form.cform");
+  if (form) {
+    var en = form.getAttribute("data-lang") === "en";
+    var msg = {
+      sending: en ? "Sending…" : "Đang gửi…",
+      ok: en ? "Thank you! Your request has been sent. We will contact you shortly." : "Cảm ơn bạn! Yêu cầu đã được gửi, chúng tôi sẽ liên hệ lại sớm.",
+      fail: en ? "Sorry, the request could not be sent. Please email info@ttpfoods.vn or call 0904 004 199." : "Rất tiếc, chưa gửi được yêu cầu. Vui lòng email info@ttpfoods.vn hoặc gọi 0904 004 199.",
+      mail: en ? "Your email app has been opened with the request – please press Send there." : "Ứng dụng email đã được mở sẵn nội dung – vui lòng bấm Gửi trong ứng dụng email."
+    };
+    // Pre-select product group from ?sp=<key> (quote buttons on product pages)
+    var sp = new URLSearchParams(location.search).get("sp");
+    if (sp) {
+      var opt = form.querySelector('#f-product option[data-key="' + sp + '"]');
+      if (opt) opt.selected = true;
+    }
+    var status = form.querySelector(".cform-status");
+    var btn = form.querySelector('button[type="submit"]');
+    function setStatus(text, kind) {
+      status.hidden = false; status.textContent = text; status.className = "cform-status is-" + kind;
+    }
+    function validate() {
+      var first = null;
+      ["f-name", "f-email", "f-message", "f-consent"].forEach(function (id) {
+        var el = document.getElementById(id);
+        var ok = el.type === "checkbox" ? el.checked : el.value.trim() !== "" && el.checkValidity();
+        el.toggleAttribute("aria-invalid", !ok);
+        if (!ok) el.setAttribute("aria-describedby", id + "-err"); else el.removeAttribute("aria-describedby");
+        el.closest(".field").classList.toggle("has-error", !ok);
+        if (!ok && !first) first = el;
+      });
+      if (first) first.focus();
+      return !first;
+    }
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (form.botcheck && form.botcheck.checked) return;
+      if (!validate()) return;
+      var data = new FormData(form);
+      var key = form.getAttribute("data-key");
+      if (!key) {
+        // No form service configured yet: hand over to the visitor's e-mail app
+        var lines = [];
+        data.forEach(function (v, k) {
+          if (["access_key", "subject", "from_name", "botcheck", "language"].indexOf(k) === -1 && v) lines.push(k + ": " + v);
+        });
+        location.href = "mailto:" + form.getAttribute("data-mailto") + "?subject=" +
+          encodeURIComponent(data.get("subject") + " – " + data.get("name")) + "&body=" + encodeURIComponent(lines.join("\n"));
+        setStatus(msg.mail, "ok");
+        return;
+      }
+      btn.disabled = true; setStatus(msg.sending, "info");
+      data.set("subject", data.get("subject") + " – " + data.get("name") + (data.get("product") ? " – " + data.get("product") : ""));
+      fetch(form.action, { method: "POST", headers: { Accept: "application/json" }, body: data })
+        .then(function (r) { return r.json(); })
+        .then(function (j) {
+          if (j && j.success) { form.reset(); setStatus(msg.ok, "ok"); }
+          else setStatus(msg.fail, "error");
+        })
+        .catch(function () { setStatus(msg.fail, "error"); })
+        .then(function () { btn.disabled = false; });
+    });
+    form.addEventListener("input", function (e) {
+      var f = e.target.closest(".field");
+      if (f && f.classList.contains("has-error")) { f.classList.remove("has-error"); e.target.removeAttribute("aria-invalid"); }
+    });
+  }
+
   /* ---------- Reveal on scroll ---------- */
   var items = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window) {

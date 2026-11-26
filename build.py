@@ -64,6 +64,7 @@ NAV = ["about", "leadership", "products", "services", "contact"]
 
 # Product groups (src/data/products.json) -> one page per group, under the Products section
 PRODUCTS = json.loads((SRC / "data" / "products.json").read_text(encoding="utf-8"))
+SITE_CFG = json.loads((SRC / "data" / "site.json").read_text(encoding="utf-8"))
 PRODUCT_IMG_EXT = (".jpg", ".jpeg", ".png", ".webp")
 
 
@@ -230,7 +231,7 @@ def render_all(env, versions):
             other = "en" if lang == "vi" else "vi"
             ctx = dict(
                 lang=lang, other_lang=other, page_key=key, page=page, pages=PAGES, nav=NAV, nav_label=NAV_LABEL,
-                nav_key=page.get("parent", key), products=PRODUCTS, product_image=product_image,
+                nav_key=page.get("parent", key), products=PRODUCTS, product_image=product_image, cfg=SITE_CFG,
                 site=SITE, year=date.today().year, v=versions,
                 url=lambda k, l=lang: PAGES[k]["url"][l],
                 t=lambda vi, en, l=lang: vi if l == "vi" else en,
@@ -247,7 +248,7 @@ def render_all(env, versions):
     html = env.get_template("pages/404.html").render(
         lang="vi", other_lang="en", page_key="404", page=dict(url={"vi": "/404.html", "en": "/404.html"},
         title={"vi": "Không tìm thấy trang | TTP Foods", "en": "Page not found | TTP Foods"}, desc={"vi": "", "en": ""}),
-        pages=PAGES, nav=NAV, nav_label=NAV_LABEL, nav_key="404", products=PRODUCTS, product_image=product_image,
+        pages=PAGES, nav=NAV, nav_label=NAV_LABEL, nav_key="404", products=PRODUCTS, product_image=product_image, cfg=SITE_CFG,
         site=SITE, year=date.today().year, v=versions,
         url=lambda k: PAGES[k]["url"]["vi"], t=lambda vi, en: vi, picture=picture)
     (OUT / "404.html").write_text(re.sub(r"\n\s*\n+", "\n", html), encoding="utf-8")
