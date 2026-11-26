@@ -1047,3 +1047,7 @@ ul.certs { list-style: none; margin: 16px 0 0; padding: 0; display: flex; flex-w
 .btn-ghost-light:hover { background: rgba(255,255,255,.12); border-color: #fff; }
 .cta-invite :focus-visible { outline-color: #fff; }
 @media (max-width: 600px) { .cta-invite { padding: 44px 0; } .cta-invite-actions, .cta-invite-actions .btn { width: 100%; } .cta-invite-actions .btn { justify-content: center; } }
+/* v3.1.2 – home hero without photo (owner: fewer images); text column only */
+.hero-grid { grid-template-columns: 1fr; }
+.hero--split .hero-text { max-width: 860px; }
+.hero--split .hero-mark { left: auto; right: -40px; height: 110%; opacity: .06; }

@@ -50,8 +50,6 @@
         <a class="btn btn-light" href="{{ url('contact') }}#form">{{ t('Yêu cầu tư vấn', 'Request advice') }}</a>
       </div>
     </div>
-    {% set hv = product_image('gelatin', '_intro') or product_image('gelatin', '_cover') %}
-    {% if hv %}<div class="hero-visual" aria-hidden="true">{{ picture(hv, '', lazy=False, sizes='(max-width: 900px) 0px, 480px') }}</div>{% endif %}
   </div>
 </section>
 
