@@ -9,7 +9,8 @@
 <section class="section-alt group-page">
   <div class="container">
     <div class="group-intro">
-      {{ m.product_media(g.key, '_group', g.brand[lang], g.brand_sub[lang], 'dark', title, icon=True) }}
+      {% set intro_id = '_group' if product_image(g.key, '_group') else '_cover' %}
+      {{ m.product_media(g.key, intro_id, g.brand[lang], g.brand_sub[lang], 'dark', title, icon=True, cover=(intro_id == '_cover')) }}
       <div class="group-intro-text">
         <h2>{{ title }}</h2>
         {% for p in g.intro[lang] %}<p>{{ p }}</p>{% endfor %}
