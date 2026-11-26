@@ -23,7 +23,8 @@ Khi dựng, mỗi trang được xuất 2 lần: tiếng Việt tại `/…`, ti
 ## Làm việc
 
 ```bash
-python3 build.py --check                              # dựng + kiểm tra liên kết, ảnh, tiêu đề
+python3 build.py --check                              # dựng + kiểm tra liên kết, ảnh, tiêu đề, nội dung bắt buộc
+python3 tools/qa.py                                   # kiểm tra trước phát hành: HTML, id, nhãn form, tiêu đề, tương phản màu
 python3 -m http.server 8090 --directory docs          # xem trước tại http://localhost:8090
 ```
 

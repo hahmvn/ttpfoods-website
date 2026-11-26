@@ -317,6 +317,16 @@ def check():
             for img in re.findall(r"<img\b[^>]*>", html):
                 if "alt=" not in img:
                     problems.append(f"{rel}: <img> without alt")
+    # Content guards: data-driven extras must actually render
+    for g in PRODUCTS:
+        if g.get("extra") == "gelatin-tables":
+            for l in LANGS:
+                f = OUT / PAGES["product-" + g["key"]]["url"][l].lstrip("/") / "index.html"
+                if f.read_text(encoding="utf-8").count("<table") < 2:
+                    problems.append(f"{PAGES['product-' + g['key']]['url'][l]}: gelatin spec tables missing")
+    for part in (SRC / "partials").glob("*.html"):
+        if not part.read_text(encoding="utf-8").strip():
+            problems.append(f"partial {part.name} is empty")
     for css in (OUT / "assets").rglob("*.css"):
         for ref in re.findall(r'url\(["\']?(/[^"\')]+)', css.read_text()):
             if not (OUT / ref.lstrip("/")).exists():
@@ -329,7 +339,8 @@ def main():
         shutil.rmtree(OUT)
     OUT.mkdir()
     webps = build_assets()
-    versions = {"css": file_hash("/assets/css/style.css"), "js": file_hash("/assets/js/main.js")}
+    versions = {"css": file_hash("/assets/css/style.css"), "js": file_hash("/assets/js/main.js"),
+                "fonts": file_hash("/assets/fonts/fonts.css")}
     built, n_legacy = render_all(make_env(), versions)
     total = sum(f.stat().st_size for f in OUT.rglob("*") if f.is_file())
     print(f"Built {len(built)} pages + 404 + {n_legacy} legacy redirects, {webps} webp images, {total // 1024} KB -> {OUT}")
