@@ -87,6 +87,19 @@
       var opt = form.querySelector('#f-product option[data-key="' + sp + '"]');
       if (opt) opt.selected = true;
     }
+    // Pre-select consulting service from ?dv=<id> ("Discuss this service" buttons)
+    var dv = params.get("dv");
+    var dvNames = {
+      "quan-ly-chat-luong": en ? "Food safety management systems" : "Xây dựng hệ thống quản lý chất lượng ATTP",
+      "toi-uu-nha-may": en ? "Factory optimization" : "Tư vấn tối ưu hoá nhà máy",
+      "cong-bo-san-pham": en ? "Quality declaration & product registration" : "Công bố chất lượng & đăng ký sản phẩm",
+      "xuat-khau": en ? "Food export promotion" : "Xúc tiến thương mại – Xuất khẩu thực phẩm"
+    };
+    if (dv && dvNames[dv]) {
+      var topt = form.querySelector('#f-topic option[data-key="consulting"]');
+      if (topt) topt.selected = true;
+      if (msgBox && !msgBox.value) msgBox.value = (en ? "Service of interest: " : "Dịch vụ quan tâm: ") + dvNames[dv] + "\n";
+    }
     var status = form.querySelector(".cform-status");
     var btn = form.querySelector('button[type="submit"]');
     function setStatus(text, kind) {

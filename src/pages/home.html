@@ -42,13 +42,28 @@
   <img class="hero-mark" src="/assets/img/brand/ttp-mark-white.png" alt="" aria-hidden="true" width="300" height="300">
   <span class="brand-stripes" aria-hidden="true"></span>
   <div class="container">
-    <span class="hero-eyebrow">{{ t('Nguyên liệu · Phụ gia · Tư vấn ngành thực phẩm', 'Ingredients · Additives · Food industry consulting') }}</span>
-    <h1>{{ t('Giải pháp tối ưu – Thành công bền vững', 'Optimum solution – Lasting success') }}</h1>
+    <span class="hero-eyebrow">{{ t('Giải pháp tối ưu – Thành công bền vững', 'Optimum solution – Lasting success') }}</span>
+    <h1>{{ t('Nguyên liệu, phụ gia thực phẩm và tư vấn cho nhà sản xuất', 'Food ingredients, additives and consulting for manufacturers') }}</h1>
     <p class="slogan">{{ t('Đối tác tin cậy của các nhà sản xuất thực phẩm – dược phẩm, kết nối nguồn cung - cầu giữa Việt Nam và thế giới.', 'A trusted partner for food and pharmaceutical manufacturers, connecting Vietnam with global supply and demand.') }}</p>
     <div class="hero-actions">
       <a class="btn btn-primary" href="{{ url('products') }}">{{ t('Xem sản phẩm', 'View products') }} <span class="arrow" aria-hidden="true">→</span></a>
-      <a class="btn btn-light" href="{{ url('contact') }}#form">{{ t('Liên hệ tư vấn', 'Talk to us') }}</a>
+      <a class="btn btn-light" href="{{ url('contact') }}#form">{{ t('Yêu cầu tư vấn', 'Request advice') }}</a>
     </div>
+  </div>
+</section>
+
+<!-- Product groups -->
+<section class="section-alt">
+  <div class="container">
+    <span class="eyebrow">{{ t('Sản phẩm', 'Products') }}</span>
+    <h2 class="section-title">{{ t('8 nhóm nguyên liệu thực phẩm', '8 food ingredient groups') }}</h2>
+    <p class="lead">{{ t('Nguyên liệu, phụ gia chất lượng cao từ các nhà sản xuất uy tín trong nước và quốc tế, phục vụ ngành bánh kẹo, sữa, đồ uống, thịt chế biến và dược phẩm.', 'High-quality ingredients and additives from reputable domestic and international manufacturers for confectionery, dairy, beverage, meat processing and pharmaceutical industries.') }}</p>
+    <ul class="group-grid">
+      {% for g in products %}
+      <li class="reveal">{{ m.group_card(g, loop.index) }}</li>
+      {% endfor %}
+    </ul>
+    <div class="center">{{ m.more_link('products', 'Xem toàn bộ sản phẩm', 'View all products') }}</div>
   </div>
 </section>
 
@@ -58,12 +73,12 @@
     <div class="who-grid">
       <div class="who-text reveal">
         <span class="eyebrow">{{ t('Chúng tôi là ai?', 'Who we are') }}</span>
-        <h2 class="who-title">{{ t('Nhà cung cấp nguyên liệu, phụ gia, sản phẩm và dịch vụ cho ngành Công nghiệp Thực phẩm.', 'We supply food ingredients, food additives, foods and food technology.') }}</h2>
-        <p class="lead">{{ t('TTP là nhà cung cấp nguyên liệu, phụ gia, sản phẩm, dịch vụ trong ngành Công nghiệp Thực phẩm. Với đội ngũ nhân sự năng động, có kinh nghiệm lâu năm trong ngành, chúng tôi mang đến những giải pháp tối ưu cho khách hàng – kết nối các nguồn cung - cầu giữa Việt Nam với thế giới.', 'We supply food ingredients, food additives, foods and food technology. Through effective research by experienced experts, we always find the most effective solution for our customers, and we create the connection between Vietnam and international resources.') }}</p>
+        <h2 class="who-title">{{ t('Nguồn nguyên liệu phù hợp. Đồng hành cùng sản xuất.', 'The right ingredients. A partner in production.') }}</h2>
+        <p class="lead">{{ t('TTP Foods (Công ty TNHH Thực phẩm TTP, thành lập năm 2021) cung cấp nguyên liệu, phụ gia cho các nhà sản xuất thực phẩm – dược phẩm và tư vấn để sản phẩm của khách hàng đạt chuẩn, ra thị trường thuận lợi. Đội ngũ lãnh đạo từng làm việc tại Sữa Hà Nội, Mondelez, Nestlé và Cục An toàn thực phẩm.', 'TTP Foods (TTP Foods Company Limited, founded in 2021) supplies ingredients and additives to food and pharmaceutical manufacturers, and advises them on meeting standards and bringing products to market. Our leaders have worked at Hanoi Milk, Mondelez, Nestlé and the Vietnam Food Administration.') }}</p>
         <ul class="who-points">
-          <li>{{ t('Nguyên liệu, phụ gia từ các nhà sản xuất uy tín trong nước và quốc tế', 'Ingredients and additives from reputable domestic and international manufacturers') }}</li>
-          <li>{{ t('Đội ngũ năng động, nhiều năm kinh nghiệm trong ngành thực phẩm', 'A dynamic team with years of food-industry experience') }}</li>
-          <li>{{ t('Kết nối nguồn cung - cầu giữa Việt Nam với thế giới', 'Connecting supply and demand between Vietnam and the world') }}</li>
+          <li>{{ t('Nguyên liệu từ nhà sản xuất uy tín tại Việt Nam, Malaysia, Trung Quốc', 'Ingredients from reputable manufacturers in Vietnam, Malaysia and China') }}</li>
+          <li>{{ t('Chọn đúng nguyên liệu theo ứng dụng: bánh kẹo, sữa, đồ uống, thịt chế biến, dược phẩm', 'The right ingredient for each application: bakery, dairy, beverages, meat, pharma') }}</li>
+          <li>{{ t('Một đầu mối cho nguyên liệu, tư vấn chất lượng và thủ tục pháp lý', 'One partner for ingredients, quality consulting and regulatory paperwork') }}</li>
         </ul>
         <div class="who-actions">
           {{ m.more_link('about', 'Về TTP Foods', 'About TTP Foods') }}
@@ -88,23 +103,8 @@
   </div>
 </section>
 
-<!-- Product groups -->
-<section class="section-alt">
-  <div class="container">
-    <span class="eyebrow">{{ t('Sản phẩm', 'Products') }}</span>
-    <h2 class="section-title">{{ t('8 nhóm nguyên liệu thực phẩm', '8 food ingredient groups') }}</h2>
-    <p class="lead">{{ t('Nguyên liệu, phụ gia chất lượng cao từ các nhà sản xuất uy tín trong nước và quốc tế, phục vụ ngành bánh kẹo, sữa, đồ uống, thịt chế biến và dược phẩm.', 'High-quality ingredients and additives from reputable domestic and international manufacturers for confectionery, dairy, beverage, meat processing and pharmaceutical industries.') }}</p>
-    <ul class="group-grid">
-      {% for g in products %}
-      <li class="reveal">{{ m.group_card(g, loop.index) }}</li>
-      {% endfor %}
-    </ul>
-    <div class="center">{{ m.more_link('products', 'Xem toàn bộ sản phẩm', 'View all products') }}</div>
-  </div>
-</section>
-
 <!-- Services -->
-<section>
+<section class="section-alt">
   <div class="container">
     <span class="eyebrow">{{ t('Dịch vụ', 'Services') }}</span>
     <h2 class="section-title">{{ t('Tư vấn quản lý doanh nghiệp', 'Business consulting') }}</h2>
@@ -121,7 +121,7 @@
 </section>
 
 <!-- Leadership teaser -->
-<section class="section-alt">
+<section class="leaders">
   <div class="container">
     <div class="leaders-head">
       <div>
