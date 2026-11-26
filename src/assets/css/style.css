@@ -793,3 +793,26 @@ ul.tags { list-style: none; margin: 12px 0 0; padding: 0; display: flex; flex-wr
 .map-load small { font-weight: 500; font-size: 13px; opacity: .7; }
 .map-load:hover span { text-decoration: underline; }
 @media (max-width: 860px) { .map-block { grid-template-columns: 1fr; } .map-info { padding: 24px; } .map-frame { min-height: 300px; } }
+
+/* Quick contact: Zalo + call (floating) */
+.quick-contact { position: fixed; right: 20px; bottom: 78px; z-index: 45; display: grid; gap: 10px; }
+.qc {
+  width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; align-content: center; gap: 0;
+  color: #fff; text-decoration: none; box-shadow: 0 6px 18px rgba(0,0,0,.22); transition: transform .15s;
+}
+.qc:hover { transform: scale(1.06); }
+.qc-label { font-size: 10px; font-weight: 700; line-height: 1; margin-top: 2px; }
+.qc-zalo { background: #0068ff; }
+.qc-call { background: var(--accent); display: none; }
+.to-top { background: var(--slate); }
+@media (max-width: 960px) {
+  .qc-call { display: grid; }
+  .quick-contact { right: 14px; bottom: 74px; }
+  .to-top { right: 17px; }
+}
+body.nav-open .quick-contact { display: none; }
+@media print { .quick-contact { display: none !important; } }
+/* Zalo link in the contact band */
+.c-zalo { margin-top: 4px; font-size: 14px; font-weight: 600; color: #fff; text-decoration: none; opacity: .9; }
+.c-zalo:hover { text-decoration: underline; opacity: 1; }
+.qc, .to-top { border: 2px solid #fff; }
