@@ -32,10 +32,10 @@
 
       <h2 id="p1">1. Bên kiểm soát dữ liệu</h2>
       <ul>
-        <li><strong>{{ co.legal_name_vi }}</strong></li>
+        <li><strong>{{ co.legal_name_official }}</strong></li>
         {% if co.tax_id %}<li>Mã số doanh nghiệp: {{ co.tax_id }}</li>{% endif %}
         {% if co.representative %}<li>Người đại diện theo pháp luật: {{ co.representative }}</li>{% endif %}
-        <li>Địa chỉ: 14B Hàn Thuyên, Phường Hai Bà Trưng, Hà Nội</li>
+        <li>Địa chỉ trụ sở: {{ co.address_vi }}</li>
         <li>Email: <a href="mailto:{{ cfg.contact_email }}">{{ cfg.contact_email }}</a> · Điện thoại: <a href="tel:+84904004199">0904 004 199</a></li>
       </ul>
 
@@ -99,18 +99,18 @@
       <p>Chúng tôi có thể cập nhật chính sách này khi thay đổi cách vận hành website hoặc khi pháp luật thay đổi. Phiên bản mới có hiệu lực kể từ khi được đăng trên trang này, kèm ngày cập nhật ở đầu trang.</p>
 
       <h2 id="p12">12. Liên hệ</h2>
-      <p>Mọi câu hỏi hoặc yêu cầu liên quan đến dữ liệu cá nhân, vui lòng gửi về <a href="mailto:{{ cfg.contact_email }}">{{ cfg.contact_email }}</a>, gọi <a href="tel:+84904004199">0904 004 199</a> hoặc gửi thư tới 14B Hàn Thuyên, Phường Hai Bà Trưng, Hà Nội.</p>
+      <p>Mọi câu hỏi hoặc yêu cầu liên quan đến dữ liệu cá nhân, vui lòng gửi về <a href="mailto:{{ cfg.contact_email }}">{{ cfg.contact_email }}</a>, gọi <a href="tel:+84904004199">0904 004 199</a> hoặc gửi thư tới {{ co.address_vi }}.</p>
     </div>
 
     <div class="l-en">
-      <p>TTP Foods Co., Ltd. ("TTP Foods", "we") respects and is committed to protecting the personal data of customers, partners and website visitors. This policy explains what data we collect through ttpfoods.vn, why we use it, how we protect it and what your rights are, in line with Vietnamese personal data protection law.</p>
+      <p>{{ co.legal_name_en }} ("TTP Foods", "we") respects and is committed to protecting the personal data of customers, partners and website visitors. This policy explains what data we collect through ttpfoods.vn, why we use it, how we protect it and what your rights are, in line with Vietnamese personal data protection law.</p>
 
       <h2 id="p1">1. Data controller</h2>
       <ul>
-        <li><strong>{{ co.legal_name_en }}</strong> ({{ co.legal_name_vi }})</li>
+        <li><strong>{{ co.legal_name_en }}</strong> ({{ co.short_name_en }} – {{ co.legal_name_official }})</li>
         {% if co.tax_id %}<li>Enterprise code: {{ co.tax_id }}</li>{% endif %}
         {% if co.representative %}<li>Legal representative: {{ co.representative }}</li>{% endif %}
-        <li>Address: 14B Han Thuyen St., Hai Ba Trung Ward, Hanoi, Vietnam</li>
+        <li>Registered address: {{ co.address_en }}</li>
         <li>Email: <a href="mailto:{{ cfg.contact_email }}">{{ cfg.contact_email }}</a> · Phone: <a href="tel:+84904004199">+84 904 004 199</a></li>
       </ul>
 
@@ -174,7 +174,7 @@
       <p>We may update this policy when the way we run the website changes or when the law changes. The new version applies from the time it is published on this page, with the update date shown at the top.</p>
 
       <h2 id="p12">12. Contact</h2>
-      <p>For any question or request about personal data, please email <a href="mailto:{{ cfg.contact_email }}">{{ cfg.contact_email }}</a>, call <a href="tel:+84904004199">+84 904 004 199</a> or write to 14B Han Thuyen St., Hai Ba Trung Ward, Hanoi, Vietnam.</p>
+      <p>For any question or request about personal data, please email <a href="mailto:{{ cfg.contact_email }}">{{ cfg.contact_email }}</a>, call <a href="tel:+84904004199">+84 904 004 199</a> or write to {{ co.address_en }}.</p>
     </div>
   </div>
 </section>

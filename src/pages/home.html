@@ -6,7 +6,9 @@
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "TTP Foods",
-  "legalName": "Công ty TNHH Thực phẩm TTP",
+  "legalName": "{{ cfg.company.legal_name_official }}",
+  "taxID": "{{ cfg.company.tax_id }}",
+  "foundingDate": "{{ cfg.company.founded_iso }}",
   "alternateName": "TTP - Trust Thriving Partner",
   "url": "{{ site }}/",
   "logo": "{{ site }}/assets/img/brand/ttp-logo-red.png",
@@ -15,7 +17,7 @@
   "description": "{{ page.desc[lang] }}",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "{{ t('14B Hàn Thuyên, Phường Hai Bà Trưng', '14B Han Thuyen St., Hai Ba Trung Ward') }}",
+    "streetAddress": "{{ t(cfg.company.street_vi, cfg.company.street_en) }}",
     "addressLocality": "{{ t('Hà Nội', 'Hanoi') }}",
     "addressCountry": "VN"
   },

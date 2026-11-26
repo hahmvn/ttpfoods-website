@@ -7,9 +7,18 @@
   },
   "company": {
     "legal_name_vi": "Công ty TNHH Thực phẩm TTP",
-    "legal_name_en": "TTP Foods Co., Ltd.",
-    "tax_id": "",
-    "representative": ""
+    "legal_name_official": "CÔNG TY TNHH THỰC PHẨM TTP",
+    "legal_name_en": "TTP Foods Company Limited",
+    "short_name_en": "TTP FOODS CO.,LTD",
+    "tax_id": "0109594425",
+    "founded": "13/04/2021",
+    "founded_iso": "2021-04-13",
+    "representative": "Nguyễn Hoàng Dương",
+    "address_vi": "Số 14B Hàn Thuyên, Phường Cửa Nam, TP. Hà Nội",
+    "address_en": "No. 14B Han Thuyen St., Cua Nam Ward, Hanoi, Vietnam",
+    "street_vi": "Số 14B Hàn Thuyên, Phường Cửa Nam",
+    "street_en": "No. 14B Han Thuyen St., Cua Nam Ward",
+    "maps_query": "14B+H%C3%A0n+Thuy%C3%AAn%2C+C%E1%BB%ADa+Nam%2C+H%C3%A0+N%E1%BB%99i"
   },
   "privacy": {
     "effective_date": "",

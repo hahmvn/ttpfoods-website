@@ -20,21 +20,21 @@
           <li><span>{{ t('Điện thoại', 'Phone') }}</span><a href="tel:+84904004199">0904 004 199</a><a href="tel:+84968383499">0968 383 499</a></li>
           <li><span>Zalo</span><a href="https://zalo.me/0904004199" target="_blank" rel="noopener">0904 004 199</a></li>
           <li><span>Email</span><a href="mailto:info@ttpfoods.vn">info@ttpfoods.vn</a></li>
-          <li><span>{{ t('Địa chỉ', 'Address') }}</span>{{ t('14B Hàn Thuyên, Phường Hai Bà Trưng, Hà Nội', '14B Han Thuyen St., Hai Ba Trung Ward, Hanoi, Vietnam') }}</li>
+          <li><span>{{ t('Địa chỉ', 'Address') }}</span>{{ t(cfg.company.address_vi, cfg.company.address_en) }}</li>
         </ul>
       </aside>
     </div>
   </div>
 </section>
 
-{% set maps_q = "14B+H%C3%A0n+Thuy%C3%AAn%2C+Hai+B%C3%A0+Tr%C6%B0ng%2C+H%C3%A0+N%E1%BB%99i" %}
+{% set maps_q = cfg.company.maps_query %}
 <section class="section-tight section-alt">
   <div class="container">
     <h2 class="section-title">{{ t('Văn phòng TTP Foods', 'TTP Foods office') }}</h2>
     <div class="map-block">
       <div class="map-info">
-        <h3>{{ t('Công ty TNHH Thực phẩm TTP', 'TTP Foods Co., Ltd.') }}</h3>
-        <p>{{ t('14B Hàn Thuyên, Phường Hai Bà Trưng, Hà Nội', '14B Han Thuyen St., Hai Ba Trung Ward, Hanoi, Vietnam') }}</p>
+        <h3>{{ t(cfg.company.legal_name_vi, cfg.company.legal_name_en) }}</h3>
+        <p>{{ t(cfg.company.address_vi, cfg.company.address_en) }}<br>{{ t('Mã số doanh nghiệp', 'Enterprise code') }}: {{ cfg.company.tax_id }}</p>
         <p><a href="tel:+84904004199">0904 004 199</a> · <a href="tel:+84968383499">0968 383 499</a><br><a href="mailto:info@ttpfoods.vn">info@ttpfoods.vn</a></p>
         <div class="map-actions">
           <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&amp;destination={{ maps_q }}" target="_blank" rel="noopener">{{ t('Chỉ đường', 'Get directions') }} <span class="arrow" aria-hidden="true">→</span></a>
