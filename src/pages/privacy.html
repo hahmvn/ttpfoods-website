@@ -1,0 +1,181 @@
+{% extends "layouts/base.html" %}
+{% import "partials/macros.html" as m with context %}
+{% block content %}
+{% set co = cfg.company %}
+{{ m.page_hero(t('Chính sách bảo mật', 'Privacy policy'),
+   t('Cách TTP Foods thu thập, sử dụng và bảo vệ dữ liệu cá nhân của bạn khi sử dụng website ttpfoods.vn.',
+     'How TTP Foods collects, uses and protects your personal data when you use ttpfoods.vn.')) }}
+
+<section>
+  <div class="container prose">
+    <p class="prose-meta">{{ t('Cập nhật lần cuối', 'Last updated') }}: {{ cfg.privacy.updated }}{% if cfg.privacy.effective_date %} · {{ t('Hiệu lực từ', 'Effective from') }}: {{ cfg.privacy.effective_date }}{% endif %}</p>
+
+    <nav class="toc" aria-label="{{ t('Mục lục', 'Contents') }}">
+      <ol>
+        <li><a href="#p1">{{ t('Bên kiểm soát dữ liệu', 'Data controller') }}</a></li>
+        <li><a href="#p2">{{ t('Dữ liệu chúng tôi thu thập', 'Data we collect') }}</a></li>
+        <li><a href="#p3">{{ t('Mục đích sử dụng', 'Purposes of use') }}</a></li>
+        <li><a href="#p4">{{ t('Cơ sở xử lý & sự đồng ý', 'Legal basis & consent') }}</a></li>
+        <li><a href="#p5">{{ t('Chia sẻ dữ liệu & bên cung cấp dịch vụ', 'Sharing & service providers') }}</a></li>
+        <li><a href="#p6">{{ t('Chuyển dữ liệu ra nước ngoài', 'Transfers outside Vietnam') }}</a></li>
+        <li><a href="#p7">{{ t('Thời gian lưu trữ', 'Retention') }}</a></li>
+        <li><a href="#p8">{{ t('Cookie & dịch vụ bên thứ ba', 'Cookies & third-party services') }}</a></li>
+        <li><a href="#p9">{{ t('Bảo mật dữ liệu', 'Security') }}</a></li>
+        <li><a href="#p10">{{ t('Quyền của bạn', 'Your rights') }}</a></li>
+        <li><a href="#p11">{{ t('Thay đổi chính sách', 'Changes to this policy') }}</a></li>
+        <li><a href="#p12">{{ t('Liên hệ', 'Contact') }}</a></li>
+      </ol>
+    </nav>
+
+    <div class="l-vi">
+      <p>Công ty TNHH Thực phẩm TTP ("TTP Foods", "chúng tôi") tôn trọng và cam kết bảo vệ dữ liệu cá nhân của khách hàng, đối tác và người truy cập website. Chính sách này giải thích dữ liệu nào được thu thập qua website ttpfoods.vn, mục đích sử dụng, cách chúng tôi bảo vệ dữ liệu và quyền của bạn, phù hợp với pháp luật Việt Nam về bảo vệ dữ liệu cá nhân.</p>
+
+      <h2 id="p1">1. Bên kiểm soát dữ liệu</h2>
+      <ul>
+        <li><strong>{{ co.legal_name_vi }}</strong></li>
+        {% if co.tax_id %}<li>Mã số doanh nghiệp: {{ co.tax_id }}</li>{% endif %}
+        {% if co.representative %}<li>Người đại diện theo pháp luật: {{ co.representative }}</li>{% endif %}
+        <li>Địa chỉ: 14B Hàn Thuyên, Phường Hai Bà Trưng, Hà Nội</li>
+        <li>Email: <a href="mailto:{{ cfg.contact_email }}">{{ cfg.contact_email }}</a> · Điện thoại: <a href="tel:+84904004199">0904 004 199</a></li>
+      </ul>
+
+      <h2 id="p2">2. Dữ liệu chúng tôi thu thập</h2>
+      <p><strong>Dữ liệu bạn chủ động cung cấp</strong> khi gửi form "Yêu cầu báo giá &amp; tư vấn": họ và tên, tên công ty, email, số điện thoại, nhu cầu, nhóm sản phẩm quan tâm và nội dung bạn viết. Các trường bắt buộc được đánh dấu (*); các trường khác bạn có thể bỏ trống.</p>
+      <p><strong>Dữ liệu khi bạn liên hệ trực tiếp</strong> qua email, điện thoại hoặc Zalo: thông tin liên lạc và nội dung trao đổi mà bạn cung cấp.</p>
+      <p><strong>Dữ liệu kỹ thuật</strong>: khi bạn truy cập, máy chủ lưu trữ website có thể tự động ghi nhận địa chỉ IP, loại trình duyệt và thời điểm truy cập phục vụ vận hành và bảo mật. Chúng tôi không dùng các dữ liệu này để nhận diện cá nhân bạn.</p>
+      <p>Chúng tôi không yêu cầu và không chủ động thu thập dữ liệu cá nhân nhạy cảm qua website. Vui lòng không gửi các thông tin như số căn cước, thông tin tài khoản ngân hàng hay dữ liệu sức khoẻ qua form.</p>
+
+      <h2 id="p3">3. Mục đích sử dụng</h2>
+      <ul>
+        <li>Trả lời câu hỏi, gửi báo giá, mẫu thử và tư vấn về sản phẩm, dịch vụ theo yêu cầu của bạn;</li>
+        <li>Liên hệ trao đổi, đàm phán và thực hiện hợp đồng khi hai bên hợp tác;</li>
+        <li>Vận hành, bảo mật và cải thiện website;</li>
+        <li>Thực hiện nghĩa vụ theo quy định của pháp luật.</li>
+      </ul>
+      <p>Chúng tôi <strong>không bán</strong> dữ liệu cá nhân và không dùng dữ liệu của bạn cho quảng cáo, tiếp thị nếu không có sự đồng ý riêng của bạn.</p>
+
+      <h2 id="p4">4. Cơ sở xử lý &amp; sự đồng ý</h2>
+      <p>Khi gửi form, bạn đánh dấu đồng ý để chúng tôi sử dụng thông tin cho mục đích liên hệ, tư vấn và báo giá. Bạn có thể rút lại sự đồng ý bất cứ lúc nào bằng cách liên hệ theo mục 12; việc rút lại không ảnh hưởng đến các xử lý đã thực hiện hợp pháp trước đó. Trong một số trường hợp, chúng tôi xử lý dữ liệu để thực hiện hợp đồng với bạn hoặc theo yêu cầu của pháp luật.</p>
+
+      <h2 id="p5">5. Chia sẻ dữ liệu &amp; bên cung cấp dịch vụ</h2>
+      <p>Dữ liệu của bạn chỉ được nhân sự có trách nhiệm của TTP Foods tiếp cận. Để vận hành website, chúng tôi sử dụng một số nhà cung cấp dịch vụ xử lý dữ liệu thay mặt chúng tôi:</p>
+      <ul>
+        <li><strong>Web3Forms</strong> – chuyển nội dung form bạn gửi tới hộp thư {{ cfg.contact_email }};</li>
+        <li><strong>Dịch vụ email của công ty</strong> – nhận và lưu thư liên hệ;</li>
+        <li><strong>GitHub Pages</strong> – lưu trữ và phân phối website.</li>
+      </ul>
+      <p>Chúng tôi chỉ cung cấp dữ liệu cho cơ quan nhà nước có thẩm quyền khi pháp luật yêu cầu.</p>
+
+      <h2 id="p6">6. Chuyển dữ liệu ra nước ngoài</h2>
+      <p>Một số nhà cung cấp dịch vụ nêu tại mục 5 có thể đặt máy chủ ngoài lãnh thổ Việt Nam, vì vậy dữ liệu bạn gửi qua form có thể được xử lý ở nước ngoài. Chúng tôi lựa chọn các nhà cung cấp có biện pháp bảo mật phù hợp và thực hiện các thủ tục liên quan theo quy định của pháp luật Việt Nam.</p>
+
+      <h2 id="p7">7. Thời gian lưu trữ</h2>
+      <p>Dữ liệu được lưu trong thời gian cần thiết để đáp ứng mục đích nêu tại mục 3 – thông thường không quá 24 tháng kể từ lần liên hệ cuối cùng nếu hai bên không phát sinh giao dịch – hoặc lâu hơn nếu hợp đồng hay pháp luật yêu cầu (ví dụ chứng từ kế toán). Sau thời hạn này, dữ liệu sẽ được xoá hoặc ẩn danh.</p>
+
+      <h2 id="p8">8. Cookie &amp; dịch vụ bên thứ ba</h2>
+      <ul>
+        <li>Website <strong>không sử dụng cookie quảng cáo hay theo dõi</strong>. Phông chữ được lưu ngay trên website, không tải từ dịch vụ bên ngoài.</li>
+        <li><strong>Bản đồ Google Maps</strong> ở trang Liên hệ chỉ được tải khi bạn bấm "Hiển thị bản đồ". Khi đó Google có thể thu thập dữ liệu theo chính sách riêng của Google.</li>
+        <li>Nút <strong>Zalo</strong> và các liên kết tới Google Maps sẽ mở dịch vụ của bên thứ ba; việc sử dụng các dịch vụ này tuân theo chính sách của họ.</li>
+      </ul>
+
+      <h2 id="p9">9. Bảo mật dữ liệu</h2>
+      <p>Website sử dụng kết nối mã hoá HTTPS. Chúng tôi giới hạn quyền truy cập dữ liệu cho nhân sự có trách nhiệm, áp dụng các biện pháp kỹ thuật và quản lý phù hợp để phòng ngừa truy cập trái phép, mất mát hoặc rò rỉ dữ liệu. Trường hợp xảy ra sự cố, chúng tôi sẽ xử lý và thông báo theo quy định của pháp luật.</p>
+
+      <h2 id="p10">10. Quyền của bạn</h2>
+      <p>Theo quy định của pháp luật về bảo vệ dữ liệu cá nhân, bạn có quyền:</p>
+      <ul>
+        <li>Được biết về việc xử lý dữ liệu cá nhân của mình;</li>
+        <li>Đồng ý hoặc không đồng ý, rút lại sự đồng ý;</li>
+        <li>Truy cập, xem, yêu cầu chỉnh sửa dữ liệu;</li>
+        <li>Yêu cầu xoá dữ liệu, hạn chế xử lý dữ liệu, yêu cầu cung cấp dữ liệu;</li>
+        <li>Phản đối việc xử lý dữ liệu;</li>
+        <li>Khiếu nại, tố cáo, khởi kiện và yêu cầu bồi thường thiệt hại theo quy định;</li>
+        <li>Tự bảo vệ quyền và lợi ích hợp pháp của mình.</li>
+      </ul>
+      <p>Để thực hiện các quyền trên, vui lòng liên hệ theo mục 12. Chúng tôi có thể đề nghị xác minh danh tính trước khi xử lý yêu cầu và sẽ phản hồi trong thời hạn theo quy định của pháp luật.</p>
+
+      <h2 id="p11">11. Thay đổi chính sách</h2>
+      <p>Chúng tôi có thể cập nhật chính sách này khi thay đổi cách vận hành website hoặc khi pháp luật thay đổi. Phiên bản mới có hiệu lực kể từ khi được đăng trên trang này, kèm ngày cập nhật ở đầu trang.</p>
+
+      <h2 id="p12">12. Liên hệ</h2>
+      <p>Mọi câu hỏi hoặc yêu cầu liên quan đến dữ liệu cá nhân, vui lòng gửi về <a href="mailto:{{ cfg.contact_email }}">{{ cfg.contact_email }}</a>, gọi <a href="tel:+84904004199">0904 004 199</a> hoặc gửi thư tới 14B Hàn Thuyên, Phường Hai Bà Trưng, Hà Nội.</p>
+    </div>
+
+    <div class="l-en">
+      <p>TTP Foods Co., Ltd. ("TTP Foods", "we") respects and is committed to protecting the personal data of customers, partners and website visitors. This policy explains what data we collect through ttpfoods.vn, why we use it, how we protect it and what your rights are, in line with Vietnamese personal data protection law.</p>
+
+      <h2 id="p1">1. Data controller</h2>
+      <ul>
+        <li><strong>{{ co.legal_name_en }}</strong> ({{ co.legal_name_vi }})</li>
+        {% if co.tax_id %}<li>Enterprise code: {{ co.tax_id }}</li>{% endif %}
+        {% if co.representative %}<li>Legal representative: {{ co.representative }}</li>{% endif %}
+        <li>Address: 14B Han Thuyen St., Hai Ba Trung Ward, Hanoi, Vietnam</li>
+        <li>Email: <a href="mailto:{{ cfg.contact_email }}">{{ cfg.contact_email }}</a> · Phone: <a href="tel:+84904004199">+84 904 004 199</a></li>
+      </ul>
+
+      <h2 id="p2">2. Data we collect</h2>
+      <p><strong>Data you provide</strong> when you send the "Request a quote or advice" form: name, company, email, phone number, your need, product group of interest and your message. Required fields are marked (*); you may leave the others blank.</p>
+      <p><strong>Data when you contact us directly</strong> by email, phone or Zalo: your contact details and what you tell us.</p>
+      <p><strong>Technical data</strong>: the server hosting the website may automatically log IP addresses, browser type and access times for operation and security. We do not use this data to identify you.</p>
+      <p>We do not ask for or intentionally collect sensitive personal data through the website. Please do not send identity numbers, bank details or health data through the form.</p>
+
+      <h2 id="p3">3. Purposes of use</h2>
+      <ul>
+        <li>Answering your questions and sending quotations, samples and advice on products and services you request;</li>
+        <li>Communicating, negotiating and performing contracts when we work together;</li>
+        <li>Operating, securing and improving the website;</li>
+        <li>Complying with legal obligations.</li>
+      </ul>
+      <p>We <strong>do not sell</strong> personal data, and we do not use your data for advertising or marketing without your separate consent.</p>
+
+      <h2 id="p4">4. Legal basis &amp; consent</h2>
+      <p>When you send the form, you tick to agree that we may use the information to contact you, advise and send quotations. You may withdraw your consent at any time by contacting us (section 12); this does not affect processing lawfully carried out before. In some cases we process data to perform a contract with you or because the law requires it.</p>
+
+      <h2 id="p5">5. Sharing &amp; service providers</h2>
+      <p>Only responsible TTP Foods staff can access your data. To run the website we use a few service providers that process data on our behalf:</p>
+      <ul>
+        <li><strong>Web3Forms</strong> – forwards the form you send to {{ cfg.contact_email }};</li>
+        <li><strong>Our company email service</strong> – receives and stores contact emails;</li>
+        <li><strong>GitHub Pages</strong> – hosts and delivers the website.</li>
+      </ul>
+      <p>We disclose data to competent authorities only when required by law.</p>
+
+      <h2 id="p6">6. Transfers outside Vietnam</h2>
+      <p>Some providers listed in section 5 may operate servers outside Vietnam, so data you send through the form may be processed abroad. We choose providers with appropriate security measures and complete the related procedures required by Vietnamese law.</p>
+
+      <h2 id="p7">7. Retention</h2>
+      <p>We keep data for as long as needed for the purposes in section 3 – normally no longer than 24 months after our last contact if no business results – or longer where a contract or the law requires it (for example accounting records). After that, data is deleted or anonymised.</p>
+
+      <h2 id="p8">8. Cookies &amp; third-party services</h2>
+      <ul>
+        <li>The website <strong>does not use advertising or tracking cookies</strong>. Fonts are served from our own website, not from an external service.</li>
+        <li>The <strong>Google Maps</strong> map on the Contact page is only loaded when you click "Show map". Google may then collect data under its own policy.</li>
+        <li>The <strong>Zalo</strong> button and links to Google Maps open third-party services, which are governed by their own policies.</li>
+      </ul>
+
+      <h2 id="p9">9. Security</h2>
+      <p>The website uses encrypted HTTPS connections. We limit access to responsible staff and apply appropriate technical and organisational measures against unauthorised access, loss or leakage. If an incident occurs, we will handle and report it as required by law.</p>
+
+      <h2 id="p10">10. Your rights</h2>
+      <p>Under personal data protection law, you have the right to:</p>
+      <ul>
+        <li>Be informed about the processing of your personal data;</li>
+        <li>Give or refuse consent, and withdraw consent;</li>
+        <li>Access, view and request correction of your data;</li>
+        <li>Request deletion, restriction of processing and provision of your data;</li>
+        <li>Object to processing;</li>
+        <li>Complain, denounce, sue and claim damages as provided by law;</li>
+        <li>Protect your own lawful rights and interests.</li>
+      </ul>
+      <p>To exercise these rights, please contact us (section 12). We may ask you to verify your identity first and will respond within the time limits set by law.</p>
+
+      <h2 id="p11">11. Changes to this policy</h2>
+      <p>We may update this policy when the way we run the website changes or when the law changes. The new version applies from the time it is published on this page, with the update date shown at the top.</p>
+
+      <h2 id="p12">12. Contact</h2>
+      <p>For any question or request about personal data, please email <a href="mailto:{{ cfg.contact_email }}">{{ cfg.contact_email }}</a>, call <a href="tel:+84904004199">+84 904 004 199</a> or write to 14B Han Thuyen St., Hai Ba Trung Ward, Hanoi, Vietnam.</p>
+    </div>
+  </div>
+</section>
+{% endblock %}

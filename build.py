@@ -59,6 +59,10 @@ PAGES = {
                     title={"vi": "Liên hệ | TTP Foods", "en": "Contact | TTP Foods"},
                     desc={"vi": "Liên hệ TTP Foods: 14B Hàn Thuyên, Phường Hai Bà Trưng, Hà Nội · 0904 004 199 · 0968 383 499 · info@ttpfoods.vn",
                           "en": "Contact TTP Foods: 14B Han Thuyen St., Hai Ba Trung Ward, Hanoi · +84 904 004 199 · +84 968 383 499 · info@ttpfoods.vn"}),
+    "privacy": dict(tpl="privacy.html", url={"vi": "/chinh-sach-bao-mat/", "en": "/en/privacy-policy/"},
+                    title={"vi": "Chính sách bảo mật | TTP Foods", "en": "Privacy policy | TTP Foods"},
+                    desc={"vi": "Chính sách bảo vệ dữ liệu cá nhân của Công ty TNHH Thực phẩm TTP khi bạn sử dụng website ttpfoods.vn.",
+                          "en": "How TTP Foods Co., Ltd. collects, uses and protects personal data on ttpfoods.vn."}),
 }
 NAV = ["about", "leadership", "products", "services", "contact"]
 
@@ -89,7 +93,8 @@ for g in PRODUCTS:
                "en": f"{g['title']['en'] or g['name']['en']} | TTP Foods products"},
         desc={l: _short(g["intro"][l][0]) if g["intro"][l] else PAGES["products"]["desc"][l] for l in ("vi", "en")})
 NAV_LABEL = {"home": ("Trang chủ", "Home"), "about": ("Giới thiệu", "About us"), "leadership": ("Ban lãnh đạo", "Leadership"),
-             "products": ("Sản phẩm", "Products"), "services": ("Dịch vụ tư vấn", "Consulting"), "contact": ("Liên hệ", "Contact")}
+             "products": ("Sản phẩm", "Products"), "services": ("Dịch vụ tư vấn", "Consulting"), "contact": ("Liên hệ", "Contact"),
+             "privacy": ("Chính sách bảo mật", "Privacy policy")}
 
 # Old CMS URLs (still in search engines/bookmarks) -> new pages
 LEGACY = {

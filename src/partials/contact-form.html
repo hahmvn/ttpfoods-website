@@ -50,7 +50,7 @@
     </div>
     <div class="field field--full field--check">
       <input id="f-consent" name="consent" type="checkbox" value="{{ t('Đồng ý', 'Agreed') }}" required>
-      <label for="f-consent">{{ t('Tôi đồng ý để TTP Foods sử dụng thông tin trên để liên hệ, tư vấn và báo giá.', 'I agree that TTP Foods may use this information to contact me, advise and send quotations.') }} <span class="req" aria-hidden="true">*</span></label>
+      <label for="f-consent">{{ t('Tôi đồng ý để TTP Foods sử dụng thông tin trên để liên hệ, tư vấn và báo giá theo', 'I agree that TTP Foods may use this information to contact me, advise and send quotations in line with the') }} <a href="{{ url('privacy') }}" target="_blank" rel="noopener">{{ t('Chính sách bảo mật', 'Privacy policy') }}</a>. <span class="req" aria-hidden="true">*</span></label>
       <p class="err" id="f-consent-err">{{ t('Vui lòng đánh dấu đồng ý để gửi.', 'Please tick to agree before sending.') }}</p>
     </div>
   </div>

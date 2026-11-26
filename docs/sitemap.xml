@@ -60,6 +60,16 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://ttpfoods.vn/en/contact/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ttpfoods.vn/lien-he/"/>
   </url>
+  <url><loc>https://ttpfoods.vn/chinh-sach-bao-mat/</loc><lastmod>2026-11-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://ttpfoods.vn/chinh-sach-bao-mat/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ttpfoods.vn/en/privacy-policy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ttpfoods.vn/chinh-sach-bao-mat/"/>
+  </url>
+  <url><loc>https://ttpfoods.vn/en/privacy-policy/</loc><lastmod>2026-11-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://ttpfoods.vn/chinh-sach-bao-mat/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ttpfoods.vn/en/privacy-policy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ttpfoods.vn/chinh-sach-bao-mat/"/>
+  </url>
   <url><loc>https://ttpfoods.vn/san-pham/kem-dac-co-duong/</loc><lastmod>2026-11-26</lastmod>
     <xhtml:link rel="alternate" hreflang="vi" href="https://ttpfoods.vn/san-pham/kem-dac-co-duong/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://ttpfoods.vn/en/products/condensed-cream/"/>
