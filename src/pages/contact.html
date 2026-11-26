@@ -41,12 +41,8 @@
           <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&amp;query={{ maps_q }}" target="_blank" rel="noopener">{{ t('Mở Google Maps', 'Open Google Maps') }}</a>
         </div>
       </div>
-      <div class="map-frame" data-map-src="https://maps.google.com/maps?q={{ maps_q }}&amp;z=16&amp;hl={{ lang }}&amp;output=embed" data-map-title="{{ t('Bản đồ văn phòng TTP Foods', 'Map of TTP Foods office') }}">
-        <button class="map-load" type="button">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
-          <span>{{ t('Hiển thị bản đồ', 'Show map') }}</span>
-          <small>{{ t('Bản đồ do Google Maps cung cấp', 'Map provided by Google Maps') }}</small>
-        </button>
+      <div class="map-frame is-loaded">
+        <iframe src="https://maps.google.com/maps?q={{ maps_q }}&amp;z=16&amp;hl={{ lang }}&amp;output=embed" title="{{ t('Bản đồ văn phòng TTP Foods', 'Map of TTP Foods office') }}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
       </div>
     </div>
   </div>
