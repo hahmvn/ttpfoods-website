@@ -121,16 +121,57 @@
 </section>
 
 <!-- Leadership teaser -->
-<section class="section-alt section-tight">
+<section class="section-alt">
   <div class="container">
-    <div class="teaser">
+    <div class="leaders-head">
       <div>
         <span class="eyebrow">{{ t('Ban lãnh đạo', 'Leadership') }}</span>
         <h2 class="section-title">{{ t('Đội ngũ nhiều năm kinh nghiệm trong ngành thực phẩm', 'A team with years of food industry experience') }}</h2>
+      </div>
+      <div class="leaders-intro">
+        <p>{{ t('Ban lãnh đạo TTP được đào tạo bài bản về công nghệ thực phẩm, sinh học và quản trị, từng giữ vị trí quản lý tại các doanh nghiệp và cơ quan hàng đầu trong ngành.', 'TTP’s leaders are trained in food technology, biotechnology and management, and have held senior roles at leading companies and authorities in the food industry.') }}</p>
         {{ m.more_link('leadership', 'Gặp gỡ ban lãnh đạo', 'Meet our leadership') }}
       </div>
-      {% include "partials/experience.html" %}
     </div>
+    <ul class="leader-grid">
+      <li class="reveal"><a class="leader-card" href="{{ url('leadership') }}#nguyen-hoang-duong">
+        <span class="leader-photo">{{ picture('nguyen-hoang-duong.png', 'Nguyễn Hoàng Dương', cls='crop-right') }}</span>
+        <span class="leader-body">
+          <span class="leader-name">Nguyễn Hoàng Dương</span>
+          <span class="leader-role">{{ t('Chủ tịch HĐQT - Giám đốc', 'Chairman of the Group') }}</span>
+          <span class="leader-line">{{ t('Nguyên Phó Tổng giám đốc Công ty CP Sữa Hà Nội', 'Former Deputy General Director, Hanoi Milk JSC') }}</span>
+          <span class="leader-edu">{{ t('Kỹ sư Công nghệ Thực phẩm, ĐH Bách khoa Hà Nội', 'Food Technology Engineer, Hanoi University of Science and Technology') }}</span>
+        </span>
+      </a></li>
+      <li class="reveal"><a class="leader-card" href="{{ url('leadership') }}#mai-khac-tung">
+        <span class="leader-photo">{{ picture('mai-khac-tung.png', 'Mai Khắc Tùng', cls='') }}</span>
+        <span class="leader-body">
+          <span class="leader-name">Mai Khắc Tùng</span>
+          <span class="leader-role">{{ t('Phó Chủ tịch kiêm Phó Giám đốc điều hành', 'Vice Chairman and Deputy CEO') }}</span>
+          <span class="leader-line">{{ t('Nguyên Giám đốc Sản xuất Mondelez', 'Former Production Director, Mondelez') }}</span>
+          <span class="leader-edu">{{ t('Kỹ sư Công nghệ Thực phẩm · MBA, ĐH Benedictine (Hoa Kỳ)', 'Food Technology Engineer · MBA, Benedictine University (USA)') }}</span>
+        </span>
+      </a></li>
+      <li class="reveal"><a class="leader-card" href="{{ url('leadership') }}#bui-hoang-anh">
+        <span class="leader-photo">{{ picture('hoang-anh.jpg', 'Bùi Hoàng Anh', cls='') }}</span>
+        <span class="leader-body">
+          <span class="leader-name">Bùi Hoàng Anh</span>
+          <span class="leader-role">{{ t('Phó Giám đốc', 'Deputy Director') }}</span>
+          <span class="leader-line">{{ t('Nguyên Quản lý pháp lý & khoa học, Nestlé Việt Nam', 'Former Regulatory & Scientific Affairs Manager, Nestlé Vietnam') }}</span>
+          <span class="leader-edu">{{ t('Thạc sỹ Công nghệ Sinh học, ĐH Bách khoa Hà Nội', 'Master of Biotechnology, Hanoi University of Technology') }}</span>
+        </span>
+      </a></li>
+      <li class="reveal"><a class="leader-card" href="{{ url('leadership') }}#vu-thuy-linh">
+        <span class="leader-photo">{{ picture('vu-thuy-linh.jpg', 'Vũ Thùy Linh', cls='') }}</span>
+        <span class="leader-body">
+          <span class="leader-name">Vũ Thùy Linh</span>
+          <span class="leader-role">{{ t('Giám đốc Hành chính Nhân sự', 'HR & Administration Director') }}</span>
+          <span class="leader-line">{{ t('Nguyên Trưởng phòng Nhân sự Yamaha Việt Nam', 'Former Human Resources Manager, Yamaha Vietnam') }}</span>
+          <span class="leader-edu">{{ t('Đại học Ngoại ngữ Hà Nội', 'Hanoi University of Foreign Languages') }}</span>
+        </span>
+      </a></li>
+    </ul>
+    {% include "partials/experience.html" %}
   </div>
 </section>
 
