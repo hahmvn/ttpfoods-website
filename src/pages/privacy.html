@@ -34,7 +34,6 @@
       <ul>
         <li><strong>{{ co.legal_name_official }}</strong></li>
         {% if co.tax_id %}<li>Mã số doanh nghiệp: {{ co.tax_id }}</li>{% endif %}
-        {% if co.representative %}<li>Người đại diện theo pháp luật: {{ co.representative }}</li>{% endif %}
         <li>Địa chỉ trụ sở: {{ co.address_vi }}</li>
         <li>Email: <a href="mailto:{{ cfg.contact_email }}">{{ cfg.contact_email }}</a> · Điện thoại: <a href="tel:+84904004199">0904 004 199</a></li>
       </ul>
@@ -109,7 +108,6 @@
       <ul>
         <li><strong>{{ co.legal_name_en }}</strong> ({{ co.short_name_en }} – {{ co.legal_name_official }})</li>
         {% if co.tax_id %}<li>Enterprise code: {{ co.tax_id }}</li>{% endif %}
-        {% if co.representative %}<li>Legal representative: {{ co.representative }}</li>{% endif %}
         <li>Registered address: {{ co.address_en }}</li>
         <li>Email: <a href="mailto:{{ cfg.contact_email }}">{{ cfg.contact_email }}</a> · Phone: <a href="tel:+84904004199">+84 904 004 199</a></li>
       </ul>
