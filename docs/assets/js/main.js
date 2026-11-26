@@ -87,6 +87,13 @@
       var opt = form.querySelector('#f-product option[data-key="' + sp + '"]');
       if (opt) opt.selected = true;
     }
+    // Pre-select request type from ?nc=bao-gia|tu-van (closing call-to-action on every page)
+    var nc = params.get("nc");
+    var ncKey = nc === "tu-van" ? "consulting" : (nc === "bao-gia" ? "quote" : null);
+    if (ncKey) {
+      var nopt = form.querySelector('#f-topic option[data-key="' + ncKey + '"]');
+      if (nopt) nopt.selected = true;
+    }
     // Pre-select consulting service from ?dv=<id> ("Discuss this service" buttons)
     var dv = params.get("dv");
     var dvNames = {

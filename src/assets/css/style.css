@@ -1036,3 +1036,14 @@ ul.certs { list-style: none; margin: 16px 0 0; padding: 0; display: flex; flex-w
 .hero--page:not(.hero--404) .breadcrumb a { color: var(--ink-2); opacity: 1; }
 .hero--page:not(.hero--404) .breadcrumb a:hover { color: var(--accent); }
 .svc h2.svc-title { font-size: 22px; margin: 6px 0 14px; letter-spacing: 0; }
+/* v3.1 – closing call-to-action: one clear invitation, contact details live in the footer */
+.cta-invite { padding: 64px 0; }
+.cta-invite-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px 48px; flex-wrap: wrap; }
+.cta-invite h2 { color: #fff; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.25; margin: 0; max-width: 640px; font-weight: 700; }
+.cta-invite-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn-white { background: #fff; color: var(--accent); border-color: #fff; }
+.btn-white:hover { background: var(--ink); border-color: var(--ink); color: #fff; }
+.btn-ghost-light { background: transparent; color: #fff; border-color: rgba(255,255,255,.7); }
+.btn-ghost-light:hover { background: rgba(255,255,255,.12); border-color: #fff; }
+.cta-invite :focus-visible { outline-color: #fff; }
+@media (max-width: 600px) { .cta-invite { padding: 44px 0; } .cta-invite-actions, .cta-invite-actions .btn { width: 100%; } .cta-invite-actions .btn { justify-content: center; } }
