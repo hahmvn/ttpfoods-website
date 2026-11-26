@@ -936,3 +936,7 @@ ul.certs { list-style: none; margin: 16px 0 0; padding: 0; display: flex; flex-w
 .contact-card .c-head { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
 .contact-card .c-head svg { margin: 0; width: 20px; height: 20px; flex: none; }
 .contact-card .c-head .c-label { margin: 0; }
+
+/* QA fixes: tap targets */
+.c-zalo { display: inline-block; padding: 6px 0; }
+.cform input[type="checkbox"] { width: 20px; height: 20px; flex: none; }

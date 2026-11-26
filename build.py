@@ -42,15 +42,15 @@ PAGES = {
                   title={"vi": "Giới thiệu TTP Foods | Sứ mệnh, tầm nhìn & giá trị",
                          "en": "About TTP Foods | Mission, vision & values"},
                   desc={"vi": "TTP Foods là nhà cung cấp nguyên liệu, phụ gia và dịch vụ cho ngành thực phẩm – đối tác tin cậy của các nhà sản xuất thực phẩm, dược phẩm Việt Nam và quốc tế.",
-                        "en": "TTP Foods supplies ingredients, additives and services to the food industry – a trusted partner of Vietnamese and international food and pharmaceutical manufacturers."}),
+                        "en": "TTP Foods supplies ingredients, additives and services to the food industry – a trusted partner of food and pharma manufacturers in Vietnam and abroad."}),
     "leadership": dict(tpl="leadership.html", url={"vi": "/ban-lanh-dao/", "en": "/en/leadership/"},
                        title={"vi": "Ban lãnh đạo | TTP Foods", "en": "Leadership | TTP Foods"},
                        desc={"vi": "Đội ngũ lãnh đạo TTP Foods với nhiều năm kinh nghiệm tại Nestlé, Mondelez, Cục An toàn thực phẩm, Sữa Hà Nội và các doanh nghiệp hàng đầu.",
                              "en": "TTP Foods' leadership team, with years of experience at Nestlé, Mondelez, the Vietnam Food Administration, Hanoi Milk and other leading companies."}),
     "products": dict(tpl="products.html", url={"vi": "/san-pham/", "en": "/en/products/"},
                      title={"vi": "Sản phẩm – Nguyên liệu thực phẩm | TTP Foods", "en": "Products – Food ingredients | TTP Foods"},
-                     desc={"vi": "Kem đặc MILKA, gelatin & collagen E-King, nhân bánh, mứt, chất nhũ hoá, kem trang trí Farina, non-dairy creamer và đậu tương cho ngành bánh kẹo, sữa, đồ uống, dược phẩm.",
-                           "en": "MILKA condensed cream, E-King gelatin & collagen, filling pastes, fruit jams, cake gel, Farina topping cream, non-dairy creamer and soybean for the food and pharma industries."}),
+                     desc={"vi": "Kem đặc MILKA, gelatin & collagen E-King, nhân bánh, mứt, chất nhũ hoá, kem trang trí Farina, non-dairy creamer, đậu tương cho bánh kẹo, sữa, đồ uống, dược phẩm.",
+                           "en": "MILKA condensed cream, E-King gelatin & collagen, fillings, fruit jams, cake gel, Farina topping cream, non-dairy creamer and soybean for food and pharma."}),
     "services": dict(tpl="services.html", url={"vi": "/dich-vu/", "en": "/en/services/"},
                      title={"vi": "Dịch vụ tư vấn ngành thực phẩm | TTP Foods", "en": "Food industry consulting services | TTP Foods"},
                      desc={"vi": "Tư vấn ISO 22000, HACCP, GMP; tối ưu hoá nhà máy; công bố chất lượng, đăng ký sản phẩm; xúc tiến xuất khẩu thực phẩm.",
@@ -183,6 +183,9 @@ def strip_lang(html, lang):
 # ---------------------------------------------------------------------------
 # Assets
 # ---------------------------------------------------------------------------
+SMALL_W = 640
+
+
 def build_assets():
     shutil.copytree(SRC / "assets", OUT / "assets")
     made = 0
@@ -191,6 +194,11 @@ def build_assets():
             im = Image.open(p)
             im.save(p.with_suffix(".webp"), "WEBP", quality=82, method=6)
             made += 1
+            if im.width > SMALL_W + 200:  # responsive variant for cards/thumbnails
+                sm = im.copy()
+                sm.thumbnail((SMALL_W, SMALL_W * 10), Image.LANCZOS)
+                sm.save(p.with_name(p.stem + f"-{SMALL_W}.webp"), "WEBP", quality=80, method=6)
+                made += 1
     for f in (SRC / "static").iterdir():
         shutil.copy(f, OUT / f.name)
     (OUT / ".nojekyll").write_text("")
@@ -225,7 +233,17 @@ def picture(src, alt, cls="", sizes=None, lazy=True, width=None, height=None):
     else:
         dims = f' width="{width}" height="{height}"'
     loading = ' loading="lazy" decoding="async"' if lazy else ""
-    return Markup(f'<picture><source srcset="{webp}" type="image/webp">'
+    srcset = webp
+    try:
+        w0 = Image.open(SRC / "assets" / "img" / src).width
+        if w0 > SMALL_W + 200:
+            small = re.sub(r"\.webp$", f"-{SMALL_W}.webp", webp)
+            srcset = f"{small} {SMALL_W}w, {webp} {w0}w"
+            sizes = sizes or "(max-width: 700px) 100vw, 600px"
+    except Exception:
+        pass
+    sz = f' sizes="{sizes}"' if sizes and " " in srcset else ""
+    return Markup(f'<picture><source srcset="{srcset}"{sz} type="image/webp">'
                   f'<img src="{base}" alt="{Markup.escape(alt)}"{attrs}{dims}{loading}></picture>')
 
 
@@ -304,7 +322,10 @@ def check():
             problems.append(f"{rel}: leftover language class")
         if "Đang cập nhật" in html or "To be updated" in html:
             problems.append(f"{rel}: placeholder text")
-        for attr, ref in re.findall(r'(href|src|srcset)="([^"#?]+)', html):
+        refs = []
+        for attr, val in re.findall(r'(href|src|srcset)="([^"#?]+)', html):
+            refs += [(attr, part.strip().split(" ")[0]) for part in val.split(",")] if attr == "srcset" else [(attr, val)]
+        for attr, ref in refs:
             if ref.startswith(("http", "mailto:", "tel:", "data:")) or not ref.startswith("/"):
                 continue
             target = OUT / ref.lstrip("/")

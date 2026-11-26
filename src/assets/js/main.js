@@ -117,9 +117,14 @@
       var key = form.getAttribute("data-key");
       if (!key) {
         // No form service configured yet: hand over to the visitor's e-mail app
+        var labels = en
+          ? { name: "Name", company: "Company", email: "Email", phone: "Phone", topic: "Topic", product: "Product group", message: "Message", consent: "Privacy consent", policy_version: "Policy", submitted_at: "Submitted at" }
+          : { name: "Họ và tên", company: "Công ty", email: "Email", phone: "Điện thoại", topic: "Nhu cầu", product: "Nhóm sản phẩm", message: "Nội dung", consent: "Đồng ý xử lý dữ liệu", policy_version: "Chính sách", submitted_at: "Thời điểm gửi" };
         var lines = [];
         data.forEach(function (v, k) {
-          if (["access_key", "subject", "from_name", "botcheck", "language"].indexOf(k) === -1 && v) lines.push(k + ": " + v);
+          if (!labels[k] || !v) return;
+          if (k === "consent") v = en ? "Yes" : "Có";
+          lines.push(k === "message" ? "\n" + labels[k] + ":\n" + v : labels[k] + ": " + v);
         });
         location.href = "mailto:" + form.getAttribute("data-mailto") + "?subject=" +
           encodeURIComponent(data.get("subject") + " – " + data.get("name")) + "&body=" + encodeURIComponent(lines.join("\n"));
