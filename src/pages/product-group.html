@@ -1,0 +1,65 @@
+{% extends "layouts/base.html" %}
+{% import "partials/macros.html" as m with context %}
+{% block content %}
+{% set g = page.group %}
+{% set title = g.title[lang] or g.name[lang] %}
+{{ m.page_hero(g.name[lang], g.tagline[lang], t('Nhóm sản phẩm', 'Product group'),
+   crumbs=[(t('Sản phẩm', 'Products'), url('products'))]) }}
+
+<section class="section-alt group-page">
+  <div class="container">
+    <div class="group-intro">
+      {{ m.product_media(g.key, '_group', g.brand[lang], g.brand_sub[lang], 'dark', title) }}
+      <div class="group-intro-text">
+        <h2>{{ title }}</h2>
+        {% for p in g.intro[lang] %}<p>{{ p }}</p>{% endfor %}
+        {% if g.specs %}
+        <dl class="specs">
+          {% for s in g.specs %}<div><dt>{{ s.label[lang] }}</dt><dd>{{ s.value[lang] }}</dd></div>{% endfor %}
+        </dl>
+        {% endif %}
+        {% if g.tags %}<ul class="tags">{% for tg in g.tags %}<li class="tag">{{ tg[lang] }}</li>{% endfor %}</ul>{% endif %}
+        <a class="btn btn-primary" href="{{ url('contact') }}">{{ t('Yêu cầu báo giá / tư vấn', 'Request a quote / advice') }} <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+
+    {% if g.products %}
+    <h2 class="section-title products-title">{{ t('Sản phẩm', 'Products') }} <span class="count">{{ g.products|length }}</span></h2>
+    <ul class="prod-cards">
+      {% for p in g.products %}
+      <li class="prod-card reveal">
+        {{ m.product_media(g.key, p.id, p.name[lang], p.sub[lang], 'dark' if loop.index is even else 'red') }}
+        <div class="prod-card-body">
+          <h3>{{ p.name[lang] }}</h3>
+          {% if p.sub[lang] and p.sub[lang]|lower != p.name[lang]|lower %}<div class="sub">{{ p.sub[lang] }}</div>{% endif %}
+          {% if p.desc[lang] %}<p>{{ p.desc[lang] }}</p>{% endif %}
+          {% if p.specs %}
+          <dl class="specs">
+            {% for s in p.specs %}<div><dt>{{ s.label[lang] }}</dt><dd>{{ s.value[lang] }}</dd></div>{% endfor %}
+          </dl>
+          {% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+
+    {% if g.extra == 'gelatin-tables' %}
+    <h2 class="section-title products-title">{{ t('Thông số gợi ý', 'Recommended specifications') }}</h2>
+    {% include "partials/gelatin-tables.html" %}
+    {% endif %}
+  </div>
+</section>
+
+<section class="section-tight">
+  <div class="container">
+    <h2 class="section-title">{{ t('Các nhóm sản phẩm khác', 'Other product groups') }}</h2>
+    <ul class="group-grid group-grid--compact">
+      {% for o in products if o.key != g.key %}
+      <li>{{ m.group_card(o, loop.index) }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% include "partials/contact-band.html" %}
+{% endblock %}

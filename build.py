@@ -61,6 +61,32 @@ PAGES = {
                           "en": "Contact TTP Foods: 14B Han Thuyen St., Hai Ba Trung Ward, Hanoi · +84 904 004 199 · +84 968 383 499 · info@ttpfoods.vn"}),
 }
 NAV = ["about", "leadership", "products", "services", "contact"]
+
+# Product groups (src/data/products.json) -> one page per group, under the Products section
+PRODUCTS = json.loads((SRC / "data" / "products.json").read_text(encoding="utf-8"))
+PRODUCT_IMG_EXT = (".jpg", ".jpeg", ".png", ".webp")
+
+
+def product_image(group, pid):
+    """Return 'products/<group>/<pid>.<ext>' if a photo was dropped into src/assets/img/products/, else None."""
+    for ext in PRODUCT_IMG_EXT:
+        rel = f"products/{group}/{pid}{ext}"
+        if (SRC / "assets" / "img" / rel).exists():
+            return rel
+    return None
+
+
+def _short(text, n=155):
+    return text if len(text) <= n else text[: n - 1].rsplit(" ", 1)[0] + "…"
+
+
+for g in PRODUCTS:
+    PAGES["product-" + g["key"]] = dict(
+        tpl="product-group.html", group=g, parent="products",
+        url={"vi": f"/san-pham/{g['slug']['vi']}/", "en": f"/en/products/{g['slug']['en']}/"},
+        title={"vi": f"{g['title']['vi'] or g['name']['vi']} | Sản phẩm TTP Foods",
+               "en": f"{g['title']['en'] or g['name']['en']} | TTP Foods products"},
+        desc={l: _short(g["intro"][l][0]) if g["intro"][l] else PAGES["products"]["desc"][l] for l in ("vi", "en")})
 NAV_LABEL = {"home": ("Trang chủ", "Home"), "about": ("Giới thiệu", "About us"), "leadership": ("Ban lãnh đạo", "Leadership"),
              "products": ("Sản phẩm", "Products"), "services": ("Dịch vụ tư vấn", "Consulting"), "contact": ("Liên hệ", "Contact")}
 
@@ -204,6 +230,7 @@ def render_all(env, versions):
             other = "en" if lang == "vi" else "vi"
             ctx = dict(
                 lang=lang, other_lang=other, page_key=key, page=page, pages=PAGES, nav=NAV, nav_label=NAV_LABEL,
+                nav_key=page.get("parent", key), products=PRODUCTS, product_image=product_image,
                 site=SITE, year=date.today().year, v=versions,
                 url=lambda k, l=lang: PAGES[k]["url"][l],
                 t=lambda vi, en, l=lang: vi if l == "vi" else en,
@@ -220,7 +247,8 @@ def render_all(env, versions):
     html = env.get_template("pages/404.html").render(
         lang="vi", other_lang="en", page_key="404", page=dict(url={"vi": "/404.html", "en": "/404.html"},
         title={"vi": "Không tìm thấy trang | TTP Foods", "en": "Page not found | TTP Foods"}, desc={"vi": "", "en": ""}),
-        pages=PAGES, nav=NAV, nav_label=NAV_LABEL, site=SITE, year=date.today().year, v=versions,
+        pages=PAGES, nav=NAV, nav_label=NAV_LABEL, nav_key="404", products=PRODUCTS, product_image=product_image,
+        site=SITE, year=date.today().year, v=versions,
         url=lambda k: PAGES[k]["url"]["vi"], t=lambda vi, en: vi, picture=picture)
     (OUT / "404.html").write_text(re.sub(r"\n\s*\n+", "\n", html), encoding="utf-8")
     # Legacy redirects (old CMS pages + old product/category URLs -> new pages)
@@ -228,7 +256,8 @@ def render_all(env, versions):
     lp = SRC / "legacy-products.json"
     if lp.exists():
         for old, info in json.loads(lp.read_text(encoding="utf-8")).items():
-            legacy[old] = PAGES["products"]["url"][info["lang"]] + (("#" + info["hash"]) if info["hash"] else "")
+            gk = "product-" + info["hash"]
+            legacy[old] = PAGES[gk]["url"][info["lang"]] if gk in PAGES else PAGES["products"]["url"][info["lang"]]
     for old, target in legacy.items():
         lang = "en" if old.startswith("/en/") else "vi"
         d = OUT / old.lstrip("/")

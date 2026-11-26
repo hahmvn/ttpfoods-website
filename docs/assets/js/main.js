@@ -68,6 +68,23 @@
   }
   if (tabs.length) { tabFromHash(); window.addEventListener("hashchange", tabFromHash); }
 
+  /* ---------- Map: load Google Maps only when the visitor asks for it ---------- */
+  document.querySelectorAll(".map-frame[data-map-src]").forEach(function (box) {
+    var btn = box.querySelector(".map-load");
+    if (!btn) return;
+    btn.addEventListener("click", function () {
+      var f = document.createElement("iframe");
+      f.src = box.getAttribute("data-map-src");
+      f.title = box.getAttribute("data-map-title") || "Map";
+      f.loading = "lazy";
+      f.referrerPolicy = "no-referrer-when-downgrade";
+      f.setAttribute("allowfullscreen", "");
+      box.innerHTML = "";
+      box.appendChild(f);
+      box.classList.add("is-loaded");
+    });
+  });
+
   /* ---------- Reveal on scroll ---------- */
   var items = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window) {

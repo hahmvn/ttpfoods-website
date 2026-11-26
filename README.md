@@ -29,6 +29,15 @@ python3 -m http.server 8090 --directory docs          # xem trước tại http:
 
 Thêm trang mới: tạo `src/pages/<ten>.html`, khai báo trong `PAGES` (và `NAV` nếu cần) ở `build.py`.
 
+## Sản phẩm
+
+- Dữ liệu 8 nhóm sản phẩm: `src/data/products.json` (tên, mô tả, thông số, sản phẩm – song ngữ `vi`/`en`).
+  Mỗi nhóm tự sinh trang `/san-pham/<slug-vi>/` và `/en/products/<slug-en>/`.
+- **Ảnh sản phẩm: chỉ cần thả file** vào `src/assets/img/products/<nhóm>/<id>.jpg` (hoặc .png):
+  `<nhóm>` = `key` của nhóm, `<id>` = `id` của sản phẩm trong products.json; ảnh đại diện nhóm là `_group.jpg`.
+  Chưa có ảnh → tự hiện khung thay thế mang thương hiệu. Nên dùng ảnh vuông, nền trắng, cạnh ≤ 800 px.
+- Ảnh còn thiếu (26/11/2026): `milka/_group`, `ndc/_group`, `soy/_group`, `gelatin/meat`.
+
 ## Phát hành
 
 Nhánh `main` = website đang chạy. Phát triển trên nhánh khác, duyệt xong mới gộp vào `main`,

@@ -1,0 +1,929 @@
+[
+ {
+  "key": "milka",
+  "slug": {
+   "vi": "kem-dac-co-duong",
+   "en": "condensed-cream"
+  },
+  "name": {
+   "vi": "Kem đặc có đường",
+   "en": "Condensed cream"
+  },
+  "title": {
+   "vi": "Kem đặc có đường MILKA",
+   "en": "MILKA sweetened condensed cream"
+  },
+  "tagline": {
+   "vi": "Pha chế đồ uống, ăn kèm bánh mỳ",
+   "en": "Beverages, spreads"
+  },
+  "brand": {
+   "vi": "MILKA",
+   "en": "MILKA"
+  },
+  "brand_sub": {
+   "vi": "Sweet condensed cream",
+   "en": "Sweet condensed cream"
+  },
+  "intro": {
+   "vi": [
+    "Được sản xuất từ các nguyên liệu hàng đầu trên dây chuyền công nghệ hiện đại của Nhà máy Mewah Dairies SDN BHD – Malaysia. Sản phẩm có bổ sung Vitamin B1, A, D3 – nguyên liệu lý tưởng cho pha chế trà sữa, cà phê sữa, đồ uống sô cô la hoặc ăn kèm bánh mỳ."
+   ],
+   "en": [
+    "Made from premium ingredients on modern manufacturing lines at the Mewah Dairies SDN BHD factory in Malaysia. Fortified with vitamins B1, A and D3 – ideal for milk tea, coffee with milk, chocolate drinks or as a spread for bread."
+   ]
+  },
+  "specs": [
+   {
+    "label": {
+     "vi": "Quy cách",
+     "en": "Packing"
+    },
+    "value": {
+     "vi": "Lon 1kg · Thùng 24 lon",
+     "en": "1kg tin · Carton 24 tins"
+    }
+   },
+   {
+    "label": {
+     "vi": "Ứng dụng",
+     "en": "Application"
+    },
+    "value": {
+     "vi": "Pha chế đồ uống; ăn trực tiếp hoặc ăn kèm",
+     "en": "Beverages; consumed directly or served with dishes"
+    }
+   },
+   {
+    "label": {
+     "vi": "Xuất xứ",
+     "en": "Origin"
+    },
+    "value": {
+     "vi": "Malaysia",
+     "en": "Malaysia"
+    }
+   }
+  ],
+  "tags": [],
+  "products": [],
+  "extra": ""
+ },
+ {
+  "key": "gelatin",
+  "slug": {
+   "vi": "gelatin-collagen",
+   "en": "gelatin-collagen"
+  },
+  "name": {
+   "vi": "Gelatin & Collagen",
+   "en": "Gelatin & Collagen"
+  },
+  "title": {
+   "vi": "Gelatin",
+   "en": "Gelatin"
+  },
+  "tagline": {
+   "vi": "Bánh kẹo, sữa, thịt, dược phẩm",
+   "en": "Confectionery, dairy, meat, pharma"
+  },
+  "brand": {
+   "vi": "E-KING",
+   "en": "E-KING"
+  },
+  "brand_sub": {
+   "vi": "Gelatin · Since 1985",
+   "en": "Gelatin · Since 1985"
+  },
+  "intro": {
+   "vi": [
+    "Sản phẩm của Eking Gelatin – nhà sản xuất gelatin chuyên nghiệp hàng đầu Trung Quốc với trên 30 năm kinh nghiệm, sản lượng hơn 3.000 tấn/năm, xuất khẩu đến hơn 50 quốc gia."
+   ],
+   "en": [
+    "E-KING GELATIN is one of the leading and largest food gelatin manufacturers in China, since 1985, with an annual output of more than 3,000 tons and products sold to more than 50 countries/regions."
+   ]
+  },
+  "specs": [
+   {
+    "label": {
+     "vi": "Dải sản phẩm",
+     "en": "Range"
+    },
+    "value": {
+     "vi": "80 – 280 bloom",
+     "en": "80 – 280 bloom"
+    }
+   },
+   {
+    "label": {
+     "vi": "Dạng",
+     "en": "Form"
+    },
+    "value": {
+     "vi": "Bột (8 – 60 mesh), hạt, tấm",
+     "en": "Powder (8 – 60 mesh), granule, flakes, sheets"
+    }
+   },
+   {
+    "label": {
+     "vi": "Hạn sử dụng",
+     "en": "Shelf-life"
+    },
+    "value": {
+     "vi": "24 tháng",
+     "en": "24 months"
+    }
+   },
+   {
+    "label": {
+     "vi": "Chứng nhận",
+     "en": "Certificates"
+    },
+    "value": {
+     "vi": "ISO 22000, Halal, FSC, FDA",
+     "en": "ISO 22000, Halal, FSC, FDA"
+    }
+   },
+   {
+    "label": {
+     "vi": "Bao bì",
+     "en": "Packing"
+    },
+    "value": {
+     "vi": "Bao giấy Kraft lót PP, 25kg",
+     "en": "Kraft paper bag with food-grade PP liner, 25kg"
+    }
+   }
+  ],
+  "tags": [],
+  "products": [
+   {
+    "name": {
+     "vi": "Gelatin dùng trong bánh kẹo",
+     "en": "Gelatin in confectionery"
+    },
+    "sub": {
+     "vi": "Confectionery",
+     "en": "Confectionery"
+    },
+    "desc": {
+     "vi": "Được sử dụng rộng rãi trong các sản phẩm bánh kẹo, dùng một mình hoặc kết hợp với các chất ổn định khác.",
+     "en": "Widely used in confectionery products, alone or in conjunction with other colloids."
+    },
+    "specs": [],
+    "id": "confectionery"
+   },
+   {
+    "name": {
+     "vi": "Gelatin dùng trong sản phẩm sữa",
+     "en": "Gelatin in dairy"
+    },
+    "sub": {
+     "vi": "Dairy",
+     "en": "Dairy"
+    },
+    "desc": {
+     "vi": "Chất hỗ trợ ổn định cho sữa chua, kem lạnh, whipping cream, caramen, đồ tráng miệng từ sữa…",
+     "en": "Co-stabilizer for yoghurt, ice cream, whipping cream, pudding, dairy desserts…"
+    },
+    "specs": [],
+    "id": "dairy"
+   },
+   {
+    "name": {
+     "vi": "Gelatin dùng trong sản phẩm thịt",
+     "en": "Gelatin in meat products"
+    },
+    "sub": {
+     "vi": "Meat",
+     "en": "Meat"
+    },
+    "desc": {
+     "vi": "Protein động vật tinh khiết với đặc tính kết hợp, nhũ hoá, ổn định và tạo keo – lý tưởng cho jăm-bông, đồ hộp, sản phẩm thịt, cá.",
+     "en": "A pure animal protein with binding, emulsifying, stabilizing and gelling properties – ideal for cured ham, canned meat, fish and aspic products."
+    },
+    "specs": [],
+    "id": "meat"
+   },
+   {
+    "name": {
+     "vi": "Gelatin dùng trong dược phẩm",
+     "en": "Pharmaceutical gelatin"
+    },
+    "sub": {
+     "vi": "Pharmaceutical",
+     "en": "Pharmaceutical"
+    },
+    "desc": {
+     "vi": "Vỏ viên nang cứng, viên nang mềm, điều chế thuốc, hỗ trợ sản xuất nhũ tương dầu và làm chất kết dính.",
+     "en": "Hard and soft capsules, medicine preparation, oil-emulsion manufacturing and as an important adhesive."
+    },
+    "specs": [],
+    "id": "pharmaceutical"
+   },
+   {
+    "name": {
+     "vi": "Gelatin công nghiệp",
+     "en": "Industrial gelatin"
+    },
+    "sub": {
+     "vi": "Industrial",
+     "en": "Industrial"
+    },
+    "desc": {
+     "vi": "Làm đặc, ổn định, đông tụ, kết dính… ứng dụng trong giấy, dệt, in ấn, gốm sứ, sơn phủ, đồ nội thất, thức ăn chăn nuôi và nhiều ngành khác.",
+     "en": "Thickening, stabilizing, coagulating, bonding… used in paper, textile, printing, ceramics, coatings, furniture, feed and other industries."
+    },
+    "specs": [],
+    "id": "industrial"
+   },
+   {
+    "name": {
+     "vi": "Collagen",
+     "en": "Collagen"
+    },
+    "sub": {
+     "vi": "Gelatin thuỷ phân",
+     "en": "Hydrolyzed gelatin"
+    },
+    "desc": {
+     "vi": "Nguồn protein quan trọng, ứng dụng trong thức uống và thực phẩm năng lượng, thanh dinh dưỡng, giải pháp chống lão hoá da và thực phẩm chức năng.",
+     "en": "An important protein source used in energy drinks and foods, nutrition bars, skin anti-aging solutions and dietary supplements."
+    },
+    "specs": [],
+    "id": "collagen"
+   }
+  ],
+  "extra": "gelatin-tables"
+ },
+ {
+  "key": "filling",
+  "slug": {
+   "vi": "nhan-banh",
+   "en": "filling-paste"
+  },
+  "name": {
+   "vi": "Nhân bánh",
+   "en": "Filling paste"
+  },
+  "title": {
+   "vi": "Nhân bánh",
+   "en": "Filling paste for cakes"
+  },
+  "tagline": {
+   "vi": "Bánh mỳ, bánh bao, mochi, su kem",
+   "en": "Bread, buns, mochi, choux"
+  },
+  "brand": {
+   "vi": "MANA · HENA",
+   "en": "MANA · HENA"
+  },
+  "brand_sub": {
+   "vi": "Filling paste",
+   "en": "Filling paste"
+  },
+  "intro": {
+   "vi": [
+    "Sản phẩm nhân bánh của Farina là giải pháp tiện lợi, nhanh chóng nhất cho tiệm bánh và cơ sở sản xuất lớn, đáp ứng mọi nhu cầu bánh tươi của thị trường."
+   ],
+   "en": [
+    "Farina filling pastes are the most convenient and fastest solution for bakery shops and large production facilities, satisfying all needs for daily fresh cakes."
+   ]
+  },
+  "specs": [],
+  "tags": [
+   {
+    "vi": "Bánh mỳ",
+    "en": "Bread"
+   },
+   {
+    "vi": "Bánh bao",
+    "en": "Buns"
+   },
+   {
+    "vi": "Mochi",
+    "en": "Mochi"
+   },
+   {
+    "vi": "Su kem",
+    "en": "Choux"
+   },
+   {
+    "vi": "Bánh ngọt",
+    "en": "Pastries"
+   }
+  ],
+  "products": [
+   {
+    "name": {
+     "vi": "Nhân bánh MANA",
+     "en": "MANA filling paste"
+    },
+    "sub": {
+     "vi": "Mana",
+     "en": "Mana"
+    },
+    "desc": {
+     "vi": "Loại nhân trộn sẵn đầu tiên tại Việt Nam, sản xuất trên dây chuyền công nghệ Đài Loan tiên tiến. Ứng dụng đa dạng cho bánh mì, bánh bao, bánh mochi…",
+     "en": "The first ready-mixed filling in Vietnam, made with advanced technology from Taiwan. Versatile for bread, dumplings, mochi…"
+    },
+    "specs": [
+     {
+      "label": {
+       "vi": "Hương vị",
+       "en": "Flavor"
+      },
+      "value": {
+       "vi": "Khoai môn, sô cô la, lá dứa, sữa dừa",
+       "en": "Taro, chocolate, pandan, coconut milk"
+      }
+     },
+     {
+      "label": {
+       "vi": "Hạn sử dụng",
+       "en": "Shelf-life"
+      },
+      "value": {
+       "vi": "3 tháng",
+       "en": "3 months"
+      }
+     },
+     {
+      "label": {
+       "vi": "Bao bì",
+       "en": "Packing"
+      },
+      "value": {
+       "vi": "Túi PP 1kg, 2kg",
+       "en": "PP bag 1kg, 2kg"
+      }
+     },
+     {
+      "label": {
+       "vi": "Xuất xứ",
+       "en": "Origin"
+      },
+      "value": {
+       "vi": "Việt Nam",
+       "en": "Vietnam"
+      }
+     }
+    ],
+    "id": "mana"
+   },
+   {
+    "name": {
+     "vi": "Nhân bánh HENA",
+     "en": "HENA filling paste"
+    },
+    "sub": {
+     "vi": "Hena",
+     "en": "Hena"
+    },
+    "desc": {
+     "vi": "Chịu nhiệt trực tiếp – nhân lộ ra mặt bánh không bị khô cháy, tạo nên những chiếc bánh bắt mắt với hương vị khó quên.",
+     "en": "Withstands direct baking heat without drying or burning, giving cakes, breads and buns an eye-catching look and delicious taste."
+    },
+    "specs": [
+     {
+      "label": {
+       "vi": "Hương vị",
+       "en": "Flavor"
+      },
+      "value": {
+       "vi": "Khoai môn, đậu xanh lá dứa, đậu xanh",
+       "en": "Taro, green bean pandan, green bean"
+      }
+     },
+     {
+      "label": {
+       "vi": "Hạn sử dụng",
+       "en": "Shelf-life"
+      },
+      "value": {
+       "vi": "6 tháng",
+       "en": "6 months"
+      }
+     },
+     {
+      "label": {
+       "vi": "Bao bì",
+       "en": "Packing"
+      },
+      "value": {
+       "vi": "Túi PP 2kg",
+       "en": "PP bag 2kg"
+      }
+     },
+     {
+      "label": {
+       "vi": "Xuất xứ",
+       "en": "Origin"
+      },
+      "value": {
+       "vi": "Việt Nam",
+       "en": "Vietnam"
+      }
+     }
+    ],
+    "id": "hena"
+   }
+  ],
+  "extra": ""
+ },
+ {
+  "key": "jam",
+  "slug": {
+   "vi": "mut",
+   "en": "fruit-jam"
+  },
+  "name": {
+   "vi": "Mứt",
+   "en": "Fruit jam"
+  },
+  "title": {
+   "vi": "Mứt",
+   "en": "Fruit jam"
+  },
+  "tagline": {
+   "vi": "Trang trí, làm nhân bánh, kem lạnh",
+   "en": "Decoration, fillings, ice cream"
+  },
+  "brand": {
+   "vi": "FRUHANA · HEMENA",
+   "en": "FRUHANA · HEMENA"
+  },
+  "brand_sub": {
+   "vi": "Fruhana · Hemena",
+   "en": "Fruhana · Hemena"
+  },
+  "intro": {
+   "vi": [
+    "Các loại mứt quả chất lượng cao dùng để trang trí bánh, kem lạnh, làm nhân bánh và tăng hương vị cho kem với hương vị đậm đà khó quên."
+   ],
+   "en": [
+    "High-quality jelly fruit jams for decoration, toppings and fillings for cakes and ice cream, with an eye-catching look and delicious taste."
+   ]
+  },
+  "specs": [],
+  "tags": [],
+  "products": [
+   {
+    "name": {
+     "vi": "Mứt FRUHANA",
+     "en": "FRUHANA fruit jam"
+    },
+    "sub": {
+     "vi": "Fruhana",
+     "en": "Fruhana"
+    },
+    "desc": {
+     "vi": "Lựa chọn hàng đầu của đầu bếp và chuyên gia bánh: 100% trái cây nhập khẩu, dây chuyền công nghệ Ý, giữ trọn hương vị, màu sắc và cấu trúc tự nhiên.",
+     "en": "The best choice of chefs and bakery experts: 100% imported fruit, Italian technology, keeping the natural taste, color and texture."
+    },
+    "specs": [
+     {
+      "label": {
+       "vi": "Hương vị",
+       "en": "Flavor"
+      },
+      "value": {
+       "vi": "Dâu tây, việt quất, đào, dứa, kiwi, mơ",
+       "en": "Strawberry, blueberry, peach, pineapple, kiwi, apricot"
+      }
+     },
+     {
+      "label": {
+       "vi": "Hạn sử dụng",
+       "en": "Shelf-life"
+      },
+      "value": {
+       "vi": "10 tháng",
+       "en": "10 months"
+      }
+     },
+     {
+      "label": {
+       "vi": "Bao bì",
+       "en": "Packing"
+      },
+      "value": {
+       "vi": "Hộp 1kg, 5kg; thùng 18kg",
+       "en": "Plastic jar 1kg, box 5kg, 18kg"
+      }
+     },
+     {
+      "label": {
+       "vi": "Xuất xứ",
+       "en": "Origin"
+      },
+      "value": {
+       "vi": "Việt Nam",
+       "en": "Vietnam"
+      }
+     }
+    ],
+    "id": "fruhana"
+   },
+   {
+    "name": {
+     "vi": "Mứt HEMENA",
+     "en": "HEMENA fruit jam"
+    },
+    "sub": {
+     "vi": "Hemena",
+     "en": "Hemena"
+    },
+    "desc": {
+     "vi": "Sản xuất trên dây chuyền nhập khẩu, nguyên liệu rõ nguồn gốc, chất lượng ổn định. Giá hợp lý, ứng dụng cho phần lớn sản phẩm bánh tươi, kem lạnh.",
+     "en": "Made on imported production lines from traceable materials with stable quality. Reasonably priced for almost all fresh products – cakes, ice cream, bread, buns."
+    },
+    "specs": [
+     {
+      "label": {
+       "vi": "Hương vị",
+       "en": "Flavor"
+      },
+      "value": {
+       "vi": "Cam, chuối, dưa lưới, dâu tây, nho, cà phê, đào, việt quất, xoài",
+       "en": "Orange, banana, melon, strawberry, grape, coffee, peach, blueberry, mango"
+      }
+     },
+     {
+      "label": {
+       "vi": "Hạn sử dụng",
+       "en": "Shelf-life"
+      },
+      "value": {
+       "vi": "9 tháng (giữ lạnh sau khi mở)",
+       "en": "9 months (refrigerate once opened)"
+      }
+     },
+     {
+      "label": {
+       "vi": "Bao bì",
+       "en": "Packing"
+      },
+      "value": {
+       "vi": "Hộp 1kg, 5kg",
+       "en": "Plastic jar 1kg, box 5kg"
+      }
+     },
+     {
+      "label": {
+       "vi": "Xuất xứ",
+       "en": "Origin"
+      },
+      "value": {
+       "vi": "Việt Nam",
+       "en": "Vietnam"
+      }
+     }
+    ],
+    "id": "hemena"
+   }
+  ],
+  "extra": ""
+ },
+ {
+  "key": "cakegel",
+  "slug": {
+   "vi": "chat-nhu-hoa",
+   "en": "cake-gel"
+  },
+  "name": {
+   "vi": "Chất nhũ hoá",
+   "en": "Cake gel"
+  },
+  "title": {
+   "vi": "Chất nhũ hoá làm bánh",
+   "en": "Cake gel (emulsifier)"
+  },
+  "tagline": {
+   "vi": "Bánh bông lan các loại",
+   "en": "Sponge cakes"
+  },
+  "brand": {
+   "vi": "CAKE GEL",
+   "en": "CAKE GEL"
+  },
+  "brand_sub": {
+   "vi": "Emulsifier",
+   "en": "Emulsifier"
+  },
+  "intro": {
+   "vi": [
+    "Chất nhũ hoá cho các loại bánh và bánh bông lan luôn được khách hàng đánh giá cao và tin dùng. Dải sản phẩm rộng đáp ứng tối đa yêu cầu về độ nở, độ xốp, cấu trúc đồng nhất, duy trì độ ẩm và độ tươi."
+   ],
+   "en": [
+    "Always appreciated and trusted by customers. The wide range meets the highest requirements for expansion, porosity, uniform structure, moisture retention and freshness."
+   ]
+  },
+  "specs": [
+   {
+    "label": {
+     "vi": "Ứng dụng",
+     "en": "Application"
+    },
+    "value": {
+     "vi": "Bánh bông lan các loại",
+     "en": "Sponge cakes"
+    }
+   },
+   {
+    "label": {
+     "vi": "Hạn sử dụng",
+     "en": "Shelf-life"
+    },
+    "value": {
+     "vi": "12 tháng",
+     "en": "12 months"
+    }
+   },
+   {
+    "label": {
+     "vi": "Bao bì",
+     "en": "Packing"
+    },
+    "value": {
+     "vi": "Thùng nhựa 5kg, 20kg",
+     "en": "Plastic box 5kg, 20kg"
+    }
+   },
+   {
+    "label": {
+     "vi": "Xuất xứ",
+     "en": "Origin"
+    },
+    "value": {
+     "vi": "Việt Nam, Trung Quốc",
+     "en": "Vietnam, China"
+    }
+   }
+  ],
+  "tags": [],
+  "products": [],
+  "extra": ""
+ },
+ {
+  "key": "topping",
+  "slug": {
+   "vi": "kem-trang-tri",
+   "en": "topping-cream"
+  },
+  "name": {
+   "vi": "Kem trang trí",
+   "en": "Topping cream"
+  },
+  "title": {
+   "vi": "Kem trang trí",
+   "en": "Topping cream"
+  },
+  "tagline": {
+   "vi": "Trang trí bánh, pha chế đồ uống",
+   "en": "Cake decoration, beverages"
+  },
+  "brand": {
+   "vi": "FARINA",
+   "en": "FARINA"
+  },
+  "brand_sub": {
+   "vi": "Topping cream",
+   "en": "Topping cream"
+  },
+  "intro": {
+   "vi": [
+    "Farina là một trong những nhà sản xuất kem topping lớn nhất Việt Nam. Dây chuyền và công nghệ châu Âu cho ra sản phẩm chất lượng cao, dùng trang trí bánh, làm nhân và pha chế đồ uống."
+   ],
+   "en": [
+    "Farina is one of the leading topping cream manufacturers in Vietnam. European technology delivers high-quality products for cake decoration, fillings and toppings for desserts and beverages."
+   ]
+  },
+  "specs": [],
+  "tags": [
+   {
+    "vi": "Bảo quản -18°C",
+    "en": "Storage -18°C"
+   },
+   {
+    "vi": "HSD 12 tháng",
+    "en": "12-month shelf-life"
+   },
+   {
+    "vi": "Made in Vietnam",
+    "en": "Made in Vietnam"
+   }
+  ],
+  "products": [
+   {
+    "name": {
+     "vi": "Luxury Creamy",
+     "en": "Luxury Creamy"
+    },
+    "sub": {
+     "vi": "Hộp 907g",
+     "en": "Paper pack 907g"
+    },
+    "desc": {
+     "vi": "Dòng kem trang trí cao cấp, hương vị vượt trội, giữ độ bóng mướt và độ đứng nhiều ngày khi bảo quản lạnh – đáp ứng tiệm bánh và khách sạn hàng đầu.",
+     "en": "Premium non-dairy cream with outstanding flavor, staying glossy, smooth and firm for days when refrigerated – for luxury bakeries and hotels."
+    },
+    "specs": [],
+    "id": "luxury-creamy"
+   },
+   {
+    "name": {
+     "vi": "Diamond Standard",
+     "en": "Diamond Standard"
+    },
+    "sub": {
+     "vi": "Hộp 1kg",
+     "en": "Paper pack 1kg"
+    },
+    "desc": {
+     "vi": "Kem dẻo, bóng mịn, ổn định tốt; độ bông 300 – 350% thể tích. Thích hợp trang trí chi tiết nhỏ yêu cầu độ dẻo cao.",
+     "en": "300 – 350% overrun, firm, smooth and glossy after whipping – suited for decorating cakes with complicated designs."
+    },
+    "specs": [],
+    "id": "diamond-standard"
+   },
+   {
+    "name": {
+     "vi": "Tapas",
+     "en": "Tapas"
+    },
+    "sub": {
+     "vi": "Hộp 1kg",
+     "en": "Paper pack 1kg"
+    },
+    "desc": {
+     "vi": "Giữ được độ ổn định về hình dạng và cấu trúc trong môi trường nhiệt độ cao nhiều giờ.",
+     "en": "Keeps a stable shape and structure under high temperatures for many hours."
+    },
+    "specs": [],
+    "id": "tapas"
+   },
+   {
+    "name": {
+     "vi": "La'Crema",
+     "en": "La'Crema"
+    },
+    "sub": {
+     "vi": "Kem cao cấp từ động vật · Hộp 1kg",
+     "en": "Dairy-blended · Paper pack 1kg"
+    },
+    "desc": {
+     "vi": "Kết hợp hoàn hảo giữa kem động vật và kem thực vật, mang lại hương vị thơm ngon đặc biệt.",
+     "en": "A perfect blend of dairy cream and topping cream for a special, delicious taste."
+    },
+    "specs": [],
+    "id": "la-crema"
+   },
+   {
+    "name": {
+     "vi": "Base",
+     "en": "Base"
+    },
+    "sub": {
+     "vi": "Hộp 1kg",
+     "en": "Paper pack 1kg"
+    },
+    "desc": {
+     "vi": "Bí quyết cho các ứng dụng trang trí, làm nhân và phủ mặt cho bánh, đồ uống, tráng miệng.",
+     "en": "A unique recipe for decorating, filling and topping cakes, beverages and desserts."
+    },
+    "specs": [],
+    "id": "base"
+   },
+   {
+    "name": {
+     "vi": "Cremé",
+     "en": "Cremé"
+    },
+    "sub": {
+     "vi": "Kem béo thực vật · Hộp 454g",
+     "en": "Non-dairy creamer · Paper pack 454g"
+    },
+    "desc": {
+     "vi": "Tăng độ béo ngậy, giảm ngọt cho cà phê, trà sữa, đồ đá xay. Có thể thay thế toàn bộ hoặc một phần whipping cream để giảm giá thành.",
+     "en": "Enhances creaminess and reduces sweetness in coffee, milk tea and ice-blended drinks. Can replace dairy whipping cream for cost savings."
+    },
+    "specs": [],
+    "id": "creme"
+   }
+  ],
+  "extra": ""
+ },
+ {
+  "key": "ndc",
+  "slug": {
+   "vi": "non-dairy-creamer",
+   "en": "non-dairy-creamer"
+  },
+  "name": {
+   "vi": "Non-dairy creamer",
+   "en": "Non-dairy creamer"
+  },
+  "title": {
+   "vi": "Non-dairy creamer",
+   "en": "Non-dairy creamer"
+  },
+  "tagline": {
+   "vi": "Cà phê, trà sữa, đồ uống hoà tan",
+   "en": "Coffee, milk tea, instant drinks"
+  },
+  "brand": {
+   "vi": "NDC",
+   "en": "NDC"
+  },
+  "brand_sub": {
+   "vi": "Non-dairy creamer",
+   "en": "Non-dairy creamer"
+  },
+  "intro": {
+   "vi": [
+    "Nhập khẩu và phân phối từ các nhà sản xuất uy tín trên thế giới, đảm bảo tiêu chuẩn khắt khe về an toàn thực phẩm, độ ổn định và hương vị. Lý tưởng cho cà phê, trà sữa, đồ uống hoà tan, bánh kẹo và thực phẩm chế biến. Không chứa lactose – phù hợp với khách hàng ăn kiêng hoặc không dung nạp sữa."
+   ],
+   "en": [
+    "Imported and distributed from reputable manufacturers worldwide, meeting strict standards for food safety, stability and flavor. Ideal for coffee, milk tea, instant beverages, confectionery and processed foods. Lactose-free – suitable for dietary needs or lactose intolerance."
+   ]
+  },
+  "specs": [],
+  "tags": [
+   {
+    "vi": "Cà phê",
+    "en": "Coffee"
+   },
+   {
+    "vi": "Trà sữa",
+    "en": "Milk tea"
+   },
+   {
+    "vi": "Đồ uống hoà tan",
+    "en": "Instant drinks"
+   },
+   {
+    "vi": "Không lactose",
+    "en": "Lactose-free"
+   }
+  ],
+  "products": [],
+  "extra": ""
+ },
+ {
+  "key": "soy",
+  "slug": {
+   "vi": "dau-tuong",
+   "en": "soybean"
+  },
+  "name": {
+   "vi": "Đậu tương",
+   "en": "Soybean"
+  },
+  "title": {
+   "vi": "Đậu tương",
+   "en": "Soybean"
+  },
+  "tagline": {
+   "vi": "Đồ uống, thực phẩm chay, dinh dưỡng",
+   "en": "Beverages, vegetarian, nutrition"
+  },
+  "brand": {
+   "vi": "SOY",
+   "en": "SOY"
+  },
+  "brand_sub": {
+   "vi": "Soy products",
+   "en": "Soy products"
+  },
+  "intro": {
+   "vi": [
+    "Đậu tương hạt, bột đậu nành, sữa đậu nành, đậu phụ và các chế phẩm từ đậu tương được tuyển chọn từ các nhà sản xuất uy tín trong và ngoài nước, kiểm soát chất lượng nghiêm ngặt. Nguồn nguyên liệu lý tưởng cho đồ uống, thực phẩm chay, bánh kẹo và sản phẩm dinh dưỡng."
+   ],
+   "en": [
+    "Soybean seeds, soy flour, soy milk, tofu and other soy-based products carefully selected from reputable domestic and international manufacturers under strict quality control. An ideal raw material for beverages, vegetarian food, confectionery and nutritional products."
+   ]
+  },
+  "specs": [],
+  "tags": [
+   {
+    "vi": "Đậu tương hạt",
+    "en": "Soybean seeds"
+   },
+   {
+    "vi": "Bột đậu nành",
+    "en": "Soy flour"
+   },
+   {
+    "vi": "Sữa đậu nành",
+    "en": "Soy milk"
+   },
+   {
+    "vi": "Đậu phụ",
+    "en": "Tofu"
+   }
+  ],
+  "products": [],
+  "extra": ""
+ }
+]

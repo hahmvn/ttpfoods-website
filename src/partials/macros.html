@@ -1,5 +1,5 @@
-{# Inner-page hero: breadcrumb + H1 + lead #}
-{% macro page_hero(title, lead='', eyebrow='') %}
+{# Inner-page hero: breadcrumb + H1 + lead. crumbs = [(label, href), …] between Home and the current page #}
+{% macro page_hero(title, lead='', eyebrow='', crumbs=[]) %}
 <section class="hero hero--page">
   <img class="hero-mark" src="/assets/img/brand/ttp-mark-white.png" alt="" aria-hidden="true" width="300" height="300">
   <span class="brand-stripes" aria-hidden="true"></span>
@@ -7,6 +7,7 @@
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <ol>
         <li><a href="{{ url('home') }}">{{ t('Trang chủ', 'Home') }}</a></li>
+        {% for label, href in crumbs %}<li><a href="{{ href }}">{{ label }}</a></li>{% endfor %}
         <li aria-current="page">{{ title }}</li>
       </ol>
     </nav>
@@ -17,7 +18,31 @@
 </section>
 {% endmacro %}
 
-{# "Read more" link row used on the home page #}
+{# "Read more" link #}
 {% macro more_link(key, vi, en) %}
 <a class="link-more" href="{{ url(key) }}">{{ t(vi, en) }} <span class="arrow" aria-hidden="true">→</span></a>
+{% endmacro %}
+
+{# Product media: real photo if one exists in src/assets/img/products/<group>/<id>.*, otherwise a branded
+   placeholder with the same frame – so cards stay aligned and look intentional either way. #}
+{% macro product_media(group_key, pid, label, sub='', tone='red', alt='') %}
+{% set img = product_image(group_key, pid) %}
+{% if img %}
+<div class="media media--photo">{{ picture(img, alt or label) }}</div>
+{% else %}
+<div class="media media--brand media--{{ tone }}" role="img" aria-label="{{ alt or label }}">
+  <span class="media-name">{{ label }}</span>{% if sub %}<span class="media-sub">{{ sub }}</span>{% endif %}
+</div>
+{% endif %}
+{% endmacro %}
+
+{# Product group card (home + products overview) #}
+{% macro group_card(g, loop_index) %}
+<a class="group-card" href="{{ url('product-' ~ g.key) }}">
+  <span class="group-visual group-visual--{{ 'dark' if loop_index is even else 'red' }}" aria-hidden="true"><span>{{ g.brand[lang] }}</span></span>
+  <span class="group-body">
+    <span class="group-name">{{ g.name[lang] }}</span>
+    {% if g.tagline %}<span class="group-use">{{ g.tagline[lang] }}</span>{% endif %}
+  </span>
+</a>
 {% endmacro %}
