@@ -1,0 +1,10 @@
+{% extends "layouts/base.html" %}
+{% import "partials/macros.html" as m with context %}
+{% block content %}
+{{ m.page_hero(t('Sản phẩm', 'Products'),
+   t('Nguyên liệu, phụ gia chất lượng cao từ các nhà sản xuất uy tín trong nước và quốc tế.',
+     'High-quality ingredients and additives from reputable domestic and international manufacturers.'),
+   t('Nguyên liệu thực phẩm', 'Food ingredients')) }}
+{% include "partials/products-catalog.html" %}
+{% include "partials/contact-band.html" %}
+{% endblock %}

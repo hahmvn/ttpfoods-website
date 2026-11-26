@@ -1,0 +1,10 @@
+{% extends "layouts/base.html" %}
+{% import "partials/macros.html" as m with context %}
+{% block content %}
+{{ m.page_hero(t('Dịch vụ tư vấn', 'Consulting services'),
+   t('Quy trình tư vấn bài bản, khoa học giúp doanh nghiệp tiết kiệm thời gian, chi phí và nâng cao năng lực cạnh tranh.',
+     'A methodical, scientific consulting process that saves time and costs and strengthens your competitiveness.'),
+   t('Tư vấn quản lý doanh nghiệp', 'Business consulting')) }}
+{% include "partials/services.html" %}
+{% include "partials/contact-band.html" %}
+{% endblock %}

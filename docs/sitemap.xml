@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://ttpfoods.vn/</loc><lastmod>2026-11-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://ttpfoods.vn/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ttpfoods.vn/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ttpfoods.vn/"/>
+  </url>
+  <url><loc>https://ttpfoods.vn/en/</loc><lastmod>2026-11-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://ttpfoods.vn/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ttpfoods.vn/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ttpfoods.vn/"/>
+  </url>
+  <url><loc>https://ttpfoods.vn/gioi-thieu/</loc><lastmod>2026-11-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://ttpfoods.vn/gioi-thieu/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ttpfoods.vn/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ttpfoods.vn/gioi-thieu/"/>
+  </url>
+  <url><loc>https://ttpfoods.vn/en/about/</loc><lastmod>2026-11-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://ttpfoods.vn/gioi-thieu/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ttpfoods.vn/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ttpfoods.vn/gioi-thieu/"/>
+  </url>
+  <url><loc>https://ttpfoods.vn/ban-lanh-dao/</loc><lastmod>2026-11-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://ttpfoods.vn/ban-lanh-dao/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ttpfoods.vn/en/leadership/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ttpfoods.vn/ban-lanh-dao/"/>
+  </url>
+  <url><loc>https://ttpfoods.vn/en/leadership/</loc><lastmod>2026-11-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://ttpfoods.vn/ban-lanh-dao/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ttpfoods.vn/en/leadership/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ttpfoods.vn/ban-lanh-dao/"/>
+  </url>
+  <url><loc>https://ttpfoods.vn/san-pham/</loc><lastmod>2026-11-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://ttpfoods.vn/san-pham/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ttpfoods.vn/en/products/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ttpfoods.vn/san-pham/"/>
+  </url>
+  <url><loc>https://ttpfoods.vn/en/products/</loc><lastmod>2026-11-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://ttpfoods.vn/san-pham/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ttpfoods.vn/en/products/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ttpfoods.vn/san-pham/"/>
+  </url>
+  <url><loc>https://ttpfoods.vn/dich-vu/</loc><lastmod>2026-11-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://ttpfoods.vn/dich-vu/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ttpfoods.vn/en/services/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ttpfoods.vn/dich-vu/"/>
+  </url>
+  <url><loc>https://ttpfoods.vn/en/services/</loc><lastmod>2026-11-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://ttpfoods.vn/dich-vu/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ttpfoods.vn/en/services/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ttpfoods.vn/dich-vu/"/>
+  </url>
+  <url><loc>https://ttpfoods.vn/lien-he/</loc><lastmod>2026-11-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://ttpfoods.vn/lien-he/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ttpfoods.vn/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ttpfoods.vn/lien-he/"/>
+  </url>
+  <url><loc>https://ttpfoods.vn/en/contact/</loc><lastmod>2026-11-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://ttpfoods.vn/lien-he/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ttpfoods.vn/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ttpfoods.vn/lien-he/"/>
+  </url>
+</urlset>

@@ -1,0 +1,41 @@
+{% extends "layouts/base.html" %}
+{% import "partials/macros.html" as m with context %}
+
+{% block content %}
+{% set team = [
+  ("nguyen-hoang-duong", "nguyen-hoang-duong.png", "Nguyễn Hoàng Dương", t("Chủ tịch HĐQT - Giám đốc", "Chairman of the Group")),
+  ("mai-khac-tung", "mai-khac-tung.png", "Mai Khắc Tùng", t("Phó Chủ tịch kiêm Phó Giám đốc điều hành", "Vice Chairman and Deputy CEO")),
+  ("bui-hoang-anh", "hoang-anh.jpg", "Bùi Hoàng Anh", t("Phó Giám đốc", "Deputy Director")),
+  ("vu-thuy-linh", "vu-thuy-linh.jpg", "Vũ Thùy Linh", t("Giám đốc Hành chính Nhân sự", "HR & Administration Director")),
+] %}
+{{ m.page_hero(t('Ban lãnh đạo', 'Leadership'),
+   t('Đội ngũ nhiều năm kinh nghiệm tại các doanh nghiệp và cơ quan hàng đầu trong ngành thực phẩm.',
+     'A team with years of experience at leading companies and authorities in the food industry.'),
+   t('Đội ngũ của chúng tôi', 'Our team')) }}
+
+<section class="section-tight">
+  <div class="container">
+    <h2 class="section-title">{{ t('Gặp gỡ đội ngũ lãnh đạo của chúng tôi', 'Meet our leadership team') }}</h2>
+    <ul class="team-grid">
+      {% for id, img, name, role in team %}
+      <li class="member reveal">
+        <div class="photo">{{ picture(img, name, cls="crop-right" if "duong" in img else "") }}</div>
+        <div class="info">
+          <h3>{{ name }}</h3>
+          <div class="role">{{ role }}</div>
+          <a class="more" href="#{{ id }}">{{ t('Xem hồ sơ', 'View profile') }} <span aria-hidden="true">↓</span></a>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    {% include "partials/experience.html" %}
+  </div>
+</section>
+
+<section class="section-alt profiles">
+  <div class="container">
+    {% include "partials/profiles.html" %}
+  </div>
+</section>
+{% include "partials/contact-band.html" %}
+{% endblock %}

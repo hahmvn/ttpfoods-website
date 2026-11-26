@@ -1,0 +1,134 @@
+{% extends "layouts/base.html" %}
+{% import "partials/macros.html" as m with context %}
+{% block jsonld %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "TTP Foods",
+  "legalName": "Công ty TNHH Thực phẩm TTP",
+  "alternateName": "TTP - Trust Thriving Partner",
+  "url": "{{ site }}/",
+  "logo": "{{ site }}/assets/img/brand/ttp-logo-red.png",
+  "image": "{{ site }}/assets/img/brand/og-image.jpg",
+  "slogan": "{{ t('Giải pháp tối ưu - Thành công bền vững', 'Optimum solution - Lasting success') }}",
+  "description": "{{ page.desc[lang] }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "{{ t('14B Hàn Thuyên, Phường Hai Bà Trưng', '14B Han Thuyen St., Hai Ba Trung Ward') }}",
+    "addressLocality": "{{ t('Hà Nội', 'Hanoi') }}",
+    "addressCountry": "VN"
+  },
+  "email": "info@ttpfoods.vn",
+  "telephone": ["+84904004199", "+84968383499"],
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "email": "info@ttpfoods.vn",
+    "telephone": ["+84904004199", "+84968383499"],
+    "areaServed": "VN",
+    "availableLanguage": ["Vietnamese", "English"]
+  }]
+}
+</script>
+{% endblock %}
+
+{% block content %}
+{% set groups = [
+  ("p-milka", t("Kem đặc có đường", "Condensed cream"), "MILKA", t("Pha chế đồ uống, ăn kèm bánh mỳ", "Beverages, spreads")),
+  ("p-gelatin", "Gelatin & Collagen", "E-KING", t("Bánh kẹo, sữa, thịt, dược phẩm", "Confectionery, dairy, meat, pharma")),
+  ("p-filling", t("Nhân bánh", "Filling paste"), "MANA · HENA", t("Bánh mỳ, bánh bao, mochi, su kem", "Bread, buns, mochi, choux")),
+  ("p-jam", t("Mứt", "Fruit jam"), "FRUHANA · HEMENA", t("Trang trí, làm nhân bánh, kem lạnh", "Decoration, fillings, ice cream")),
+  ("p-cakegel", t("Chất nhũ hoá", "Cake gel"), "CAKE GEL", t("Bánh bông lan các loại", "Sponge cakes")),
+  ("p-topping", t("Kem trang trí", "Topping cream"), "FARINA", t("Trang trí bánh, pha chế đồ uống", "Cake decoration, beverages")),
+  ("p-ndc", "Non-dairy creamer", "NDC", t("Cà phê, trà sữa, đồ uống hoà tan", "Coffee, milk tea, instant drinks")),
+  ("p-soy", t("Đậu tương", "Soybean"), "SOY", t("Đồ uống, thực phẩm chay, dinh dưỡng", "Beverages, vegetarian, nutrition")),
+] %}
+
+<section class="hero">
+  <img class="hero-mark" src="/assets/img/brand/ttp-mark-white.png" alt="" aria-hidden="true" width="300" height="300">
+  <span class="brand-stripes" aria-hidden="true"></span>
+  <div class="container">
+    <span class="hero-eyebrow">{{ t('Nguyên liệu · Phụ gia · Tư vấn ngành thực phẩm', 'Ingredients · Additives · Food industry consulting') }}</span>
+    <h1>{{ t('Giải pháp tối ưu – Thành công bền vững', 'Optimum solution – Lasting success') }}</h1>
+    <p class="slogan">{{ t('Đối tác tin cậy của các nhà sản xuất thực phẩm – dược phẩm, kết nối nguồn cung - cầu giữa Việt Nam và thế giới.', 'A trusted partner for food and pharmaceutical manufacturers, connecting Vietnam with global supply and demand.') }}</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="{{ url('products') }}">{{ t('Xem sản phẩm', 'View products') }} <span class="arrow" aria-hidden="true">→</span></a>
+      <a class="btn btn-light" href="{{ url('contact') }}">{{ t('Liên hệ tư vấn', 'Talk to us') }}</a>
+    </div>
+  </div>
+</section>
+
+<!-- Who we are -->
+<section>
+  <div class="container">
+    <span class="eyebrow">{{ t('Chúng tôi là ai?', 'Who we are') }}</span>
+    <h2 class="statement reveal">{{ t('Chúng tôi là nhà cung cấp nguyên liệu, phụ gia, sản phẩm và dịch vụ cho ngành Công nghiệp Thực phẩm.', 'We supply food ingredients, food additives, foods and food technology.') }}</h2>
+    <div class="about-grid">
+      <div class="reveal">
+        <p class="lead">{{ t('TTP là nhà cung cấp nguyên liệu, phụ gia, sản phẩm, dịch vụ trong ngành Công nghiệp Thực phẩm. Với đội ngũ nhân sự năng động, có kinh nghiệm lâu năm trong ngành, chúng tôi mang đến những giải pháp tối ưu cho khách hàng – kết nối các nguồn cung - cầu giữa Việt Nam với thế giới.', 'We supply food ingredients, food additives, foods and food technology. Through effective research by experienced experts, we always find the most effective solution for our customers, and we create the connection between Vietnam and international resources.') }}</p>
+        {{ m.more_link('about', 'Về TTP Foods', 'About TTP Foods') }}
+      </div>
+      <div class="split-stats split-stats--card reveal">
+        <div class="stat"><div class="num">8</div><div class="label">{{ t('nhóm sản phẩm nguyên liệu thực phẩm', 'food ingredient product groups') }}</div></div>
+        <div class="stat"><div class="num">4</div><div class="label">{{ t('lĩnh vực dịch vụ tư vấn', 'consulting service areas') }}</div></div>
+        <div class="stat"><div class="num">5</div><div class="label">{{ t('quốc gia & vùng lãnh thổ nguồn cung, công nghệ', 'source & technology countries/regions') }}</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Product groups -->
+<section class="section-alt">
+  <div class="container">
+    <span class="eyebrow">{{ t('Sản phẩm', 'Products') }}</span>
+    <h2 class="section-title">{{ t('8 nhóm nguyên liệu thực phẩm', '8 food ingredient groups') }}</h2>
+    <p class="lead">{{ t('Nguyên liệu, phụ gia chất lượng cao từ các nhà sản xuất uy tín trong nước và quốc tế, phục vụ ngành bánh kẹo, sữa, đồ uống, thịt chế biến và dược phẩm.', 'High-quality ingredients and additives from reputable domestic and international manufacturers for confectionery, dairy, beverage, meat processing and pharmaceutical industries.') }}</p>
+    <ul class="group-grid">
+      {% for id, name, brand, use in groups %}
+      <li class="reveal">
+        <a class="group-card" href="{{ url('products') }}#{{ id[2:] }}">
+          <span class="group-visual" aria-hidden="true"><span>{{ brand }}</span></span>
+          <span class="group-body">
+            <span class="group-name">{{ name }}</span>
+            <span class="group-use">{{ use }}</span>
+          </span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    <div class="center">{{ m.more_link('products', 'Xem toàn bộ sản phẩm', 'View all products') }}</div>
+  </div>
+</section>
+
+<!-- Services -->
+<section>
+  <div class="container">
+    <span class="eyebrow">{{ t('Dịch vụ', 'Services') }}</span>
+    <h2 class="section-title">{{ t('Tư vấn quản lý doanh nghiệp', 'Business consulting') }}</h2>
+    <ol class="svc-list">
+      <li class="reveal"><span class="svc-num">01</span><h3>{{ t('Hệ thống quản lý chất lượng ATTP', 'Food safety management systems') }}</h3><p>ISO 22000 · HACCP · GMP · ISO 9001 · ISO 14001</p></li>
+      <li class="reveal"><span class="svc-num">02</span><h3>{{ t('Tối ưu hoá nhà máy', 'Factory optimization') }}</h3><p>{{ t('Cân bằng chuyền · OEE · Đào tạo', 'Line balancing · OEE · Training') }}</p></li>
+      <li class="reveal"><span class="svc-num">03</span><h3>{{ t('Công bố chất lượng & đăng ký sản phẩm', 'Quality declaration & product registration') }}</h3><p>{{ t('Thực phẩm · Dược phẩm · Mỹ phẩm', 'Food · Pharma · Cosmetics') }}</p></li>
+      <li class="reveal"><span class="svc-num">04</span><h3>{{ t('Xúc tiến thương mại – Xuất khẩu', 'Food export promotion') }}</h3><p>{{ t('Xuất khẩu · Thị trường quốc tế', 'Export · Global markets') }}</p></li>
+    </ol>
+    {{ m.more_link('services', 'Tìm hiểu dịch vụ tư vấn', 'Explore our consulting services') }}
+  </div>
+</section>
+
+<!-- Leadership teaser -->
+<section class="section-alt section-tight">
+  <div class="container">
+    <div class="teaser">
+      <div>
+        <span class="eyebrow">{{ t('Ban lãnh đạo', 'Leadership') }}</span>
+        <h2 class="section-title">{{ t('Đội ngũ nhiều năm kinh nghiệm trong ngành thực phẩm', 'A team with years of food industry experience') }}</h2>
+        {{ m.more_link('leadership', 'Gặp gỡ ban lãnh đạo', 'Meet our leadership') }}
+      </div>
+      {% include "partials/experience.html" %}
+    </div>
+  </div>
+</section>
+
+{% include "partials/contact-band.html" %}
+{% endblock %}

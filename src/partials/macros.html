@@ -1,0 +1,23 @@
+{# Inner-page hero: breadcrumb + H1 + lead #}
+{% macro page_hero(title, lead='', eyebrow='') %}
+<section class="hero hero--page">
+  <img class="hero-mark" src="/assets/img/brand/ttp-mark-white.png" alt="" aria-hidden="true" width="300" height="300">
+  <span class="brand-stripes" aria-hidden="true"></span>
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="{{ url('home') }}">{{ t('Trang chủ', 'Home') }}</a></li>
+        <li aria-current="page">{{ title }}</li>
+      </ol>
+    </nav>
+    {% if eyebrow %}<span class="hero-eyebrow">{{ eyebrow }}</span>{% endif %}
+    <h1>{{ title }}</h1>
+    {% if lead %}<p class="slogan">{{ lead }}</p>{% endif %}
+  </div>
+</section>
+{% endmacro %}
+
+{# "Read more" link row used on the home page #}
+{% macro more_link(key, vi, en) %}
+<a class="link-more" href="{{ url(key) }}">{{ t(vi, en) }} <span class="arrow" aria-hidden="true">→</span></a>
+{% endmacro %}

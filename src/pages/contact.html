@@ -1,0 +1,32 @@
+{% extends "layouts/base.html" %}
+{% import "partials/macros.html" as m with context %}
+{% block content %}
+{{ m.page_hero(t('Liên hệ', 'Contact'),
+   t('Liên hệ với TTP Foods để được tư vấn về nguyên liệu, phụ gia và dịch vụ phù hợp.',
+     'Contact TTP Foods for advice on the right ingredients, additives and services.'),
+   t('Chúng tôi luôn sẵn sàng hỗ trợ', 'We are here to help')) }}
+{% include "partials/contact-band.html" %}
+
+<section>
+  <div class="container">
+    <h2 class="section-title">{{ t('Chúng tôi có thể hỗ trợ bạn', 'How we can help') }}</h2>
+    <div class="help-grid">
+      <a class="help-card reveal" href="{{ url('products') }}">
+        <h3>{{ t('Nguyên liệu & phụ gia', 'Ingredients & additives') }}</h3>
+        <p>{{ t('Tư vấn chọn nguyên liệu, báo giá và mẫu thử cho 8 nhóm sản phẩm.', 'Product selection, quotations and samples across our 8 product groups.') }}</p>
+        <span class="link-more">{{ t('Xem sản phẩm', 'View products') }} <span class="arrow" aria-hidden="true">→</span></span>
+      </a>
+      <a class="help-card reveal" href="{{ url('services') }}">
+        <h3>{{ t('Tư vấn doanh nghiệp', 'Business consulting') }}</h3>
+        <p>{{ t('ISO, HACCP, GMP, tối ưu nhà máy, công bố & đăng ký sản phẩm, xuất khẩu.', 'ISO, HACCP, GMP, factory optimization, product registration and export.') }}</p>
+        <span class="link-more">{{ t('Xem dịch vụ', 'View services') }} <span class="arrow" aria-hidden="true">→</span></span>
+      </a>
+      <a class="help-card reveal" href="mailto:info@ttpfoods.vn">
+        <h3>{{ t('Gửi yêu cầu qua email', 'Email us your request') }}</h3>
+        <p>{{ t('Mô tả nhu cầu của bạn, chúng tôi sẽ phản hồi sớm nhất.', 'Tell us what you need and we will get back to you shortly.') }}</p>
+        <span class="link-more">info@ttpfoods.vn <span class="arrow" aria-hidden="true">→</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+{% endblock %}
