@@ -1,3 +1,4 @@
+{% from "partials/icons.html" import group_icon %}
 {# Inner-page hero: breadcrumb + H1 + lead. crumbs = [(label, href), …] between Home and the current page #}
 {% macro page_hero(title, lead='', eyebrow='', crumbs=[]) %}
 <section class="hero hero--page">
@@ -25,12 +26,13 @@
 
 {# Product media: real photo if one exists in src/assets/img/products/<group>/<id>.*, otherwise a branded
    placeholder with the same frame – so cards stay aligned and look intentional either way. #}
-{% macro product_media(group_key, pid, label, sub='', tone='red', alt='') %}
+{% macro product_media(group_key, pid, label, sub='', tone='red', alt='', icon=False) %}
 {% set img = product_image(group_key, pid) %}
 {% if img %}
 <div class="media media--photo">{{ picture(img, alt or label) }}</div>
 {% else %}
 <div class="media media--brand media--{{ tone }}" role="img" aria-label="{{ alt or label }}">
+  {% if icon %}<span class="media-icon">{{ group_icon(group_key, 72) }}</span>{% endif %}
   <span class="media-name">{{ label }}</span>{% if sub %}<span class="media-sub">{{ sub }}</span>{% endif %}
 </div>
 {% endif %}
@@ -39,7 +41,7 @@
 {# Product group card (home + products overview) #}
 {% macro group_card(g, loop_index) %}
 <a class="group-card" href="{{ url('product-' ~ g.key) }}">
-  <span class="group-visual group-visual--{{ 'dark' if loop_index is even else 'red' }}" aria-hidden="true"><span>{{ g.brand[lang] }}</span></span>
+  <span class="group-visual group-visual--{{ 'dark' if loop_index is even else 'red' }}" aria-hidden="true">{{ group_icon(g.key) }}<span class="group-brand">{{ g.brand[lang] }}</span></span>
   <span class="group-body">
     <span class="group-name">{{ g.name[lang] }}</span>
     {% if g.tagline %}<span class="group-use">{{ g.tagline[lang] }}</span>{% endif %}

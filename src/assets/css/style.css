@@ -823,3 +823,39 @@ body.nav-open .quick-contact { display: none; }
 @media (max-width: 600px) { .toc ol { columns: 1; } }
 .field--check label a { color: var(--accent); font-weight: 600; }
 .footer-bottom a { color: inherit; }
+
+/* =====================================================================
+   v2 beta.2 – product presentation upgrade
+   ===================================================================== */
+.group-visual { flex-direction: column; gap: 8px; display: flex; align-items: center; justify-content: center; }
+.group-visual .gicon { position: relative; z-index: 1; color: #fff; opacity: .95; }
+.group-brand { position: relative; z-index: 1; font-size: 12px; letter-spacing: 1.5px; font-weight: 700; opacity: .85; }
+.group-grid--compact .group-visual .gicon { width: 34px; height: 34px; }
+.group-grid--compact .group-brand { display: none; }
+.media-icon { position: relative; z-index: 1; color: #fff; opacity: .95; margin-bottom: 6px; }
+/* Application filter (products overview) */
+.app-filter { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 28px 0 4px; }
+.app-filter-label { font-weight: 700; font-size: 14px; color: var(--ink-2); margin-right: 4px; }
+.chip-btn {
+  font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 16px; border-radius: 999px;
+  border: 1px solid var(--line); background: #fff; color: var(--ink-2); transition: background .15s, color .15s, border-color .15s;
+}
+.chip-btn:hover { border-color: var(--ink); color: var(--ink); }
+.chip-btn[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+.app-filter-status { min-height: 1.4em; margin: 6px 0 0; font-size: 14px; color: var(--ink-2); }
+.group-grid > li[hidden] { display: none; }
+/* Group page: certifications + applications */
+ul.certs { list-style: none; margin: 16px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.cert {
+  display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: var(--radius);
+  background: #fff; border: 1.5px solid var(--accent); color: var(--accent-dark); font-weight: 700; font-size: 13px; letter-spacing: .3px;
+}
+.apps-line { margin: 16px 0 0; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: 14px; }
+.apps-line > span { font-weight: 700; color: var(--ink); }
+.app-link { color: var(--accent); font-weight: 600; text-decoration: none; border-bottom: 1px dashed currentColor; }
+.app-link:hover { border-bottom-style: solid; }
+/* Product card: quote button + photo frame */
+.btn-sm { padding: 8px 14px; font-size: 14px; }
+.prod-quote { align-self: flex-start; margin-top: 18px; }
+.prod-card dl.specs { margin-top: auto; }
+.prod-card > .media--photo img { padding: 6px; }

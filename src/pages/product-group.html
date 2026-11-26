@@ -9,7 +9,7 @@
 <section class="section-alt group-page">
   <div class="container">
     <div class="group-intro">
-      {{ m.product_media(g.key, '_group', g.brand[lang], g.brand_sub[lang], 'dark', title) }}
+      {{ m.product_media(g.key, '_group', g.brand[lang], g.brand_sub[lang], 'dark', title, icon=True) }}
       <div class="group-intro-text">
         <h2>{{ title }}</h2>
         {% for p in g.intro[lang] %}<p>{{ p }}</p>{% endfor %}
@@ -19,6 +19,16 @@
         </dl>
         {% endif %}
         {% if g.tags %}<ul class="tags">{% for tg in g.tags %}<li class="tag">{{ tg[lang] }}</li>{% endfor %}</ul>{% endif %}
+        {% if g.certs %}
+        <ul class="certs" aria-label="{{ t('Chứng nhận', 'Certifications') }}">
+          {% for c in g.certs %}<li class="cert"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l8 3.5v5c0 4.8-3.4 8.3-8 9.5-4.6-1.2-8-4.7-8-9.5v-5z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>{{ c }}</li>{% endfor %}
+        </ul>
+        {% endif %}
+        {% if g.applications %}
+        <p class="apps-line"><span>{{ t('Ứng dụng:', 'Applications:') }}</span>
+          {% for a in applications if a.key in g.applications %}<a class="app-link" href="{{ url('products') }}?ud={{ a.key }}">{{ a.name[lang] }}</a>{% endfor %}
+        </p>
+        {% endif %}
         <a class="btn btn-primary" href="{{ url('contact') }}?sp={{ g.key }}#form">{{ t('Yêu cầu báo giá / tư vấn', 'Request a quote / advice') }} <span class="arrow" aria-hidden="true">→</span></a>
       </div>
     </div>
@@ -38,6 +48,7 @@
             {% for s in p.specs %}<div><dt>{{ s.label[lang] }}</dt><dd>{{ s.value[lang] }}</dd></div>{% endfor %}
           </dl>
           {% endif %}
+          <a class="btn btn-outline btn-sm prod-quote" href="{{ url('contact') }}?sp={{ g.key }}&amp;p={{ p.name[lang]|urlencode }}#form">{{ t('Yêu cầu báo giá', 'Request a quote') }} <span class="arrow" aria-hidden="true">→</span></a>
         </div>
       </li>
       {% endfor %}

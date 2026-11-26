@@ -25,6 +25,10 @@
    "vi": "Sweet condensed cream",
    "en": "Sweet condensed cream"
   },
+  "applications": [
+   "beverage"
+  ],
+  "certs": [],
   "intro": {
    "vi": [
     "Được sản xuất từ các nguyên liệu hàng đầu trên dây chuyền công nghệ hiện đại của Nhà máy Mewah Dairies SDN BHD – Malaysia. Sản phẩm có bổ sung Vitamin B1, A, D3 – nguyên liệu lý tưởng cho pha chế trà sữa, cà phê sữa, đồ uống sô cô la hoặc ăn kèm bánh mỳ."
@@ -95,6 +99,18 @@
    "vi": "Gelatin · Since 1985",
    "en": "Gelatin · Since 1985"
   },
+  "applications": [
+   "bakery",
+   "dairy",
+   "meat",
+   "pharma"
+  ],
+  "certs": [
+   "ISO 22000",
+   "Halal",
+   "FSC",
+   "FDA"
+  ],
   "intro": {
    "vi": [
     "Sản phẩm của Eking Gelatin – nhà sản xuất gelatin chuyên nghiệp hàng đầu Trung Quốc với trên 30 năm kinh nghiệm, sản lượng hơn 3.000 tấn/năm, xuất khẩu đến hơn 50 quốc gia."
@@ -282,6 +298,10 @@
    "vi": "Filling paste",
    "en": "Filling paste"
   },
+  "applications": [
+   "bakery"
+  ],
+  "certs": [],
   "intro": {
    "vi": [
     "Sản phẩm nhân bánh của Farina là giải pháp tiện lợi, nhanh chóng nhất cho tiệm bánh và cơ sở sản xuất lớn, đáp ứng mọi nhu cầu bánh tươi của thị trường."
@@ -424,6 +444,26 @@
        "vi": "Việt Nam",
        "en": "Vietnam"
       }
+     },
+     {
+      "label": {
+       "vi": "Bảo quản",
+       "en": "Storage"
+      },
+      "value": {
+       "vi": "Bao bì kín, nơi khô ráo; dùng không hết để tủ mát",
+       "en": "Sealed, dry place; refrigerate after opening"
+      }
+     },
+     {
+      "label": {
+       "vi": "Ứng dụng",
+       "en": "Application"
+      },
+      "value": {
+       "vi": "Bánh mì, bánh pía, bánh rán…",
+       "en": "Bread, pia cakes, fried buns…"
+      }
      }
     ],
     "id": "hena"
@@ -457,6 +497,11 @@
    "vi": "Fruhana · Hemena",
    "en": "Fruhana · Hemena"
   },
+  "applications": [
+   "bakery",
+   "dairy"
+  ],
+  "certs": [],
   "intro": {
    "vi": [
     "Các loại mứt quả chất lượng cao dùng để trang trí bánh, kem lạnh, làm nhân bánh và tăng hương vị cho kem với hương vị đậm đà khó quên."
@@ -521,6 +566,16 @@
        "vi": "Việt Nam",
        "en": "Vietnam"
       }
+     },
+     {
+      "label": {
+       "vi": "Bảo quản",
+       "en": "Storage"
+      },
+      "value": {
+       "vi": "Nơi khô ráo, tránh nắng; giữ lạnh sau khi mở",
+       "en": "Dry place, away from sunlight; refrigerate after opening"
+      }
      }
     ],
     "id": "fruhana"
@@ -578,6 +633,16 @@
        "vi": "Việt Nam",
        "en": "Vietnam"
       }
+     },
+     {
+      "label": {
+       "vi": "Bảo quản",
+       "en": "Storage"
+      },
+      "value": {
+       "vi": "Nơi khô ráo, tránh nắng; giữ lạnh sau khi mở",
+       "en": "Dry place, away from sunlight; refrigerate after opening"
+      }
      }
     ],
     "id": "hemena"
@@ -611,6 +676,10 @@
    "vi": "Emulsifier",
    "en": "Emulsifier"
   },
+  "applications": [
+   "bakery"
+  ],
+  "certs": [],
   "intro": {
    "vi": [
     "Chất nhũ hoá cho các loại bánh và bánh bông lan luôn được khách hàng đánh giá cao và tin dùng. Dải sản phẩm rộng đáp ứng tối đa yêu cầu về độ nở, độ xốp, cấu trúc đồng nhất, duy trì độ ẩm và độ tươi."
@@ -691,6 +760,11 @@
    "vi": "Topping cream",
    "en": "Topping cream"
   },
+  "applications": [
+   "bakery",
+   "beverage"
+  ],
+  "certs": [],
   "intro": {
    "vi": [
     "Farina là một trong những nhà sản xuất kem topping lớn nhất Việt Nam. Dây chuyền và công nghệ châu Âu cho ra sản phẩm chất lượng cao, dùng trang trí bánh, làm nhân và pha chế đồ uống."
@@ -728,7 +802,28 @@
      "vi": "Dòng kem trang trí cao cấp, hương vị vượt trội, giữ độ bóng mướt và độ đứng nhiều ngày khi bảo quản lạnh – đáp ứng tiệm bánh và khách sạn hàng đầu.",
      "en": "Premium non-dairy cream with outstanding flavor, staying glossy, smooth and firm for days when refrigerated – for luxury bakeries and hotels."
     },
-    "specs": [],
+    "specs": [
+     {
+      "label": {
+       "vi": "Nguồn gốc",
+       "en": "Origin of fat"
+      },
+      "value": {
+       "vi": "Kem thực vật",
+       "en": "Plant-based"
+      }
+     },
+     {
+      "label": {
+       "vi": "Đóng thùng",
+       "en": "Carton"
+      },
+      "value": {
+       "vi": "12 hộp",
+       "en": "12 packs"
+      }
+     }
+    ],
     "id": "luxury-creamy"
    },
    {
@@ -744,7 +839,28 @@
      "vi": "Kem dẻo, bóng mịn, ổn định tốt; độ bông 300 – 350% thể tích. Thích hợp trang trí chi tiết nhỏ yêu cầu độ dẻo cao.",
      "en": "300 – 350% overrun, firm, smooth and glossy after whipping – suited for decorating cakes with complicated designs."
     },
-    "specs": [],
+    "specs": [
+     {
+      "label": {
+       "vi": "Nguồn gốc",
+       "en": "Origin of fat"
+      },
+      "value": {
+       "vi": "Kem thực vật",
+       "en": "Plant-based"
+      }
+     },
+     {
+      "label": {
+       "vi": "Đánh bông",
+       "en": "Whipping"
+      },
+      "value": {
+       "vi": "Đánh được ở tốc độ cao",
+       "en": "Can be whipped at high speed"
+      }
+     }
+    ],
     "id": "diamond-standard"
    },
    {
@@ -840,6 +956,11 @@
    "vi": "Non-dairy creamer",
    "en": "Non-dairy creamer"
   },
+  "applications": [
+   "beverage",
+   "bakery"
+  ],
+  "certs": [],
   "intro": {
    "vi": [
     "Nhập khẩu và phân phối từ các nhà sản xuất uy tín trên thế giới, đảm bảo tiêu chuẩn khắt khe về an toàn thực phẩm, độ ổn định và hương vị. Lý tưởng cho cà phê, trà sữa, đồ uống hoà tan, bánh kẹo và thực phẩm chế biến. Không chứa lactose – phù hợp với khách hàng ăn kiêng hoặc không dung nạp sữa."
@@ -896,6 +1017,12 @@
    "vi": "Soy products",
    "en": "Soy products"
   },
+  "applications": [
+   "beverage",
+   "nutrition",
+   "bakery"
+  ],
+  "certs": [],
   "intro": {
    "vi": [
     "Đậu tương hạt, bột đậu nành, sữa đậu nành, đậu phụ và các chế phẩm từ đậu tương được tuyển chọn từ các nhà sản xuất uy tín trong và ngoài nước, kiểm soát chất lượng nghiêm ngặt. Nguồn nguyên liệu lý tưởng cho đồ uống, thực phẩm chay, bánh kẹo và sản phẩm dinh dưỡng."

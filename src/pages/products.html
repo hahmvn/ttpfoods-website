@@ -10,9 +10,15 @@
   <div class="container">
     <h2 class="section-title">{{ t('8 nhóm nguyên liệu thực phẩm', '8 food ingredient groups') }}</h2>
     <p class="lead">{{ t('Danh mục nguyên liệu, phụ gia chất lượng cao từ các nhà sản xuất uy tín trong nước và quốc tế, phục vụ ngành bánh kẹo, sữa, đồ uống, thịt chế biến và dược phẩm.', 'High-quality ingredients and additives from reputable domestic and international manufacturers for confectionery, dairy, beverage, meat processing and pharmaceutical industries.') }}</p>
-    <ul class="group-grid">
+    <div class="app-filter" role="group" aria-label="{{ t('Lọc theo ứng dụng', 'Filter by application') }}">
+      <span class="app-filter-label">{{ t('Tra cứu theo ứng dụng:', 'Browse by application:') }}</span>
+      <button type="button" class="chip-btn" data-app="" aria-pressed="true">{{ t('Tất cả', 'All') }}</button>
+      {% for a in applications %}<button type="button" class="chip-btn" data-app="{{ a.key }}" aria-pressed="false">{{ a.name[lang] }}</button>{% endfor %}
+    </div>
+    <p class="app-filter-status" role="status" aria-live="polite"></p>
+    <ul class="group-grid" id="group-grid">
       {% for g in products %}
-      <li class="reveal">{{ m.group_card(g, loop.index) }}</li>
+      <li class="reveal" data-apps="{{ g.applications|join(' ') }}">{{ m.group_card(g, loop.index) }}</li>
       {% endfor %}
     </ul>
   </div>

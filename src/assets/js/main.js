@@ -96,7 +96,10 @@
       mail: en ? "Your email app has been opened with the request – please press Send there." : "Ứng dụng email đã được mở sẵn nội dung – vui lòng bấm Gửi trong ứng dụng email."
     };
     // Pre-select product group from ?sp=<key> (quote buttons on product pages)
-    var sp = new URLSearchParams(location.search).get("sp");
+    var params = new URLSearchParams(location.search);
+    var sp = params.get("sp"), pn = params.get("p");
+    var msgBox = form.querySelector("#f-message");
+    if (pn && msgBox && !msgBox.value) msgBox.value = (en ? "Product of interest: " : "Sản phẩm quan tâm: ") + pn + "\n";
     if (sp) {
       var opt = form.querySelector('#f-product option[data-key="' + sp + '"]');
       if (opt) opt.selected = true;
@@ -155,6 +158,29 @@
       var f = e.target.closest(".field");
       if (f && f.classList.contains("has-error")) { f.classList.remove("has-error"); e.target.removeAttribute("aria-invalid"); }
     });
+  }
+
+  /* ---------- Products overview: filter groups by application (?ud=bakery) ---------- */
+  var filter = document.querySelector(".app-filter");
+  if (filter) {
+    var cards = Array.prototype.slice.call(document.querySelectorAll("#group-grid > li"));
+    var statusEl = document.querySelector(".app-filter-status");
+    var isEn = document.documentElement.lang === "en";
+    var apply = function (app, push) {
+      var shown = 0;
+      cards.forEach(function (li) {
+        var ok = !app || (" " + li.getAttribute("data-apps") + " ").indexOf(" " + app + " ") > -1;
+        li.hidden = !ok; if (ok) { shown++; li.classList.add("in"); }
+      });
+      filter.querySelectorAll(".chip-btn").forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-app") === app)); });
+      if (statusEl) statusEl.textContent = app ? (isEn ? shown + " product groups" : shown + " nhóm sản phẩm") : "";
+      if (push && history.replaceState) history.replaceState(null, "", app ? "?ud=" + app : location.pathname);
+    };
+    filter.addEventListener("click", function (e) {
+      var b = e.target.closest(".chip-btn"); if (b) apply(b.getAttribute("data-app"), true);
+    });
+    var initial = new URLSearchParams(location.search).get("ud");
+    if (initial && filter.querySelector('[data-app="' + initial + '"]')) apply(initial, false);
   }
 
   /* ---------- Reveal on scroll ---------- */

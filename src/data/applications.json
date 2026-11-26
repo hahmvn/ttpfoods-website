@@ -1,0 +1,44 @@
+[
+ {
+  "key": "bakery",
+  "name": {
+   "vi": "Bánh & kẹo",
+   "en": "Bakery & confectionery"
+  }
+ },
+ {
+  "key": "beverage",
+  "name": {
+   "vi": "Đồ uống & pha chế",
+   "en": "Beverages"
+  }
+ },
+ {
+  "key": "dairy",
+  "name": {
+   "vi": "Sữa & kem lạnh",
+   "en": "Dairy & ice cream"
+  }
+ },
+ {
+  "key": "meat",
+  "name": {
+   "vi": "Thịt chế biến",
+   "en": "Processed meat"
+  }
+ },
+ {
+  "key": "pharma",
+  "name": {
+   "vi": "Dược phẩm & TPCN",
+   "en": "Pharma & supplements"
+  }
+ },
+ {
+  "key": "nutrition",
+  "name": {
+   "vi": "Thực phẩm chay & dinh dưỡng",
+   "en": "Vegetarian & nutrition"
+  }
+ }
+]
